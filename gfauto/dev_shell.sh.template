@@ -25,7 +25,7 @@ test -f ./dev_shell.sh.template
 # Modify if needed.
 # E.g. PYTHON=python3.7
 # Warning: read below if using Python >=3.8.
-PYTHON=${PYTHON-python}
+PYTHON=${PYTHON-python3}
 
 # In some cases it seems that pipenv will NOT recognize the Python version
 # that is being used, and so pipenv will create a virtual environment using
