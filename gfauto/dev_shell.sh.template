@@ -25,17 +25,13 @@ test -f ./dev_shell.sh.template
 # Modify if needed.
 # E.g. PYTHON=python3.7
 # Warning: read below if using Python >=3.8.
-PYTHON=${PYTHON-python3.6}
+PYTHON=${PYTHON-python}
 
 # In some cases it seems that pipenv will NOT recognize the Python version
 # that is being used, and so pipenv will create a virtual environment using
 # some other version of Python. This line ensures the virtual environment
 # is created using the correct Python binary.
 export PIPENV_PYTHON="$(which "${PYTHON}")"
-
-# Upgrade/install pip and pipenv if needed.
-"${PYTHON}" -m pip install --upgrade --user 'pip>=19.2.3' 'pipenv>=2018.11.26'
-
 # Place the virtual environment at `gfauto/.venv`.
 export PIPENV_VENV_IN_PROJECT=1
 
