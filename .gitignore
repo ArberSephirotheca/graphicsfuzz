@@ -25,7 +25,7 @@ venv/
 .attach_pid*
 
 /envbuild.py
-
+Dockerfile
 /OPEN_SOURCE_LICENSES.TXT
 /graphicsfuzz/src/main/scripts/OPEN_SOURCE_LICENSES.TXT
 /out/
