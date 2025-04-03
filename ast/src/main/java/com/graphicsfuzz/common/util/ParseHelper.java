@@ -140,7 +140,7 @@ public class ParseHelper {
         null,
         false,
         inputStream,
-        ToolPaths.glslangValidator(), "-E", "--stdin", "-S", "--target-env vulkan1.3", shaderKind.getFileExtension());
+        ToolPaths.glslangValidator(), "-E", "--stdin", "-S", shaderKind.getFileExtension());
     if (preprocessorResult.res != 0) {
       throw new RuntimeException("Preprocessing failed with exit code " + preprocessorResult.res
           + ": " + preprocessorResult.stderr);
