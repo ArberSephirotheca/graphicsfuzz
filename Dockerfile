@@ -1,3 +1,6 @@
+#! to execute: 
+    # install docker buildx if not installed
+    # docker buildx build --target final --output type=local,dest=./output .
 FROM ubuntu:22.04 AS builder 
 
 # Install essential packages

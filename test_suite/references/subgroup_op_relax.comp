@@ -1,0 +1,29 @@
+
+#version 460
+#extension GL_KHR_shader_subgroup_basic : enable
+#extension GL_KHR_shader_subgroup_ballot : enable
+#extension GL_KHR_shader_subgroup_vote : enable
+#extension GL_KHR_shader_subgroup_basic : enable
+#extension GL_KHR_memory_scope_semantics : enable
+
+layout(set = 0, binding = 0)  buffer Buf {
+	uint buf[];
+}; 
+
+layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
+
+void main() {
+	uint subgroup_id = gl_SubgroupID;
+	uint subgroup_size = gl_SubgroupSize;
+	uint gid = gl_GlobalInvocationID.x;
+    uint subgroup_local_id = gl_SubgroupInvocationID;
+    if (subgroup_local_id + 1 < subgroup_size) {
+        // scope: invocation, storage: buffer, memory semantics: relax
+	    // for memory semantics spec, see: https://registry.khronos.org/SPIR-V/specs/unified1/SPIRV.html#Memory_Semantics_-id-
+	    atomicStore(buf[gid + 1], uint(2), 4, 64, 0);
+        subgroupAll(true); // this really does nothing but acts like a subgroup barrier
+    } else {
+        atomicStore(buf[(gid + 1) % subgroup_size], uint(3), 4, 64, 0);
+        subgroupAll(true); // this really does nothing but acts like a subgroup barrier
+    }
+}
