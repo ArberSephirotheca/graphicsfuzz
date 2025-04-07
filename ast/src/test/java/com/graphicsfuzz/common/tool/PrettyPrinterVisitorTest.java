@@ -64,10 +64,10 @@ public class PrettyPrinterVisitorTest {
   @Test
   public void testLiteralUniformDefines() throws Exception {
     final String shaderWithBindings = ""
-        + "layout(set = 0, binding = 0) uniform buf0 { int _GLF_uniform_int_values[2]; };"
-        + "layout(set = 0, binding = 1) uniform buf1 { uint _GLF_uniform_uint_values[1]; };"
-        + "layout(set = 0, binding = 2) uniform buf2 { float _GLF_uniform_float_values[3]; };"
-        + "layout(set = 0, binding = 3) uniform sampler2D tex;"
+        + "layout(set = 0, binding = 1) uniform buf0 { int _GLF_uniform_int_values[2]; };"
+        + "layout(set = 0, binding = 2) uniform buf1 { uint _GLF_uniform_uint_values[1]; };"
+        + "layout(set = 0, binding = 3) uniform buf2 { float _GLF_uniform_float_values[3]; };"
+        + "layout(set = 0, binding = 4) uniform sampler2D tex;"
         + "void main() { "
         + "int a = _GLF_uniform_int_values[0];"
         + "int b = _GLF_uniform_int_values[1];"
@@ -86,21 +86,21 @@ public class PrettyPrinterVisitorTest {
         + "#define _float_11_3 _GLF_uniform_float_values[2]\n"
         + "\n"
         + "// Contents of _GLF_uniform_int_values: [0, 2]\n"
-        + "layout(set = 0, binding = 0) uniform buf0 {\n"
+        + "layout(set = 0, binding = 1) uniform buf0 {\n"
         + " int _GLF_uniform_int_values[2];\n"
         + "};\n"
 
         + "// Contents of _GLF_uniform_uint_values: 72\n"
-        + "layout(set = 0, binding = 1) uniform buf1 {\n"
+        + "layout(set = 0, binding = 2) uniform buf1 {\n"
         + " uint _GLF_uniform_uint_values[1];\n"
         + "};\n"
 
         + "// Contents of _GLF_uniform_float_values: [0.0, 22.4, 11.3]\n"
-        + "layout(set = 0, binding = 2) uniform buf2 {\n"
+        + "layout(set = 0, binding = 3) uniform buf2 {\n"
         + " float _GLF_uniform_float_values[3];\n"
         + "};\n"
 
-        + "layout(set = 0, binding = 3) uniform sampler2D tex;\n\n"
+        + "layout(set = 0, binding = 4) uniform sampler2D tex;\n\n"
 
         + "void main()\n"
         + "{\n"
@@ -134,8 +134,8 @@ public class PrettyPrinterVisitorTest {
   @Test
   public void testUniformBlockContentsInComments() throws Exception {
     final String shaderWithBindings = ""
-        + "layout(set = 0, binding = 0) uniform buf0 { int _GLF_uniform_int_values[2]; };"
-        + "layout(set = 0, binding = 1) uniform buf1 { float _GLF_uniform_float_values[1]; };"
+        + "layout(set = 0, binding = 1) uniform buf0 { int _GLF_uniform_int_values[2]; };"
+        + "layout(set = 0, binding = 2) uniform buf1 { float _GLF_uniform_float_values[1]; };"
         + "void main() { }";
 
     final String shaderPrettyPrinted = ""
@@ -144,11 +144,11 @@ public class PrettyPrinterVisitorTest {
         + "#define _float_3_0 _GLF_uniform_float_values[0]\n"
         + "\n"
         + "// Contents of _GLF_uniform_int_values: [0, 1]\n"
-        + "layout(set = 0, binding = 0) uniform buf0 {\n"
+        + "layout(set = 0, binding = 1) uniform buf0 {\n"
         + " int _GLF_uniform_int_values[2];\n"
         + "};\n"
         + "// Contents of _GLF_uniform_float_values: 3.0\n"
-        + "layout(set = 0, binding = 1) uniform buf1 {\n"
+        + "layout(set = 0, binding = 2) uniform buf1 {\n"
         + " float _GLF_uniform_float_values[1];\n"
         + "};\n"
         + "void main()\n"
@@ -845,8 +845,7 @@ public class PrettyPrinterVisitorTest {
             + ": ((IDX) >= SZ ? SZ - 1 : (IDX)))\n"
         + "#define _GLF_MAKE_IN_BOUNDS_UINT(IDX, SZ)  ((IDX) >= SZ ? SZ - 1u : (IDX))\n"
         + "#endif\n"
-        + "\n"
-        + "// END OF GENERATED HEADER\n";
+        + "\n";
 
     ByteArrayOutputStream bytes = new ByteArrayOutputStream();
     PrintStream printStream = new PrintStream(bytes);

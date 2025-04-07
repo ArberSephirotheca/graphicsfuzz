@@ -44,7 +44,9 @@ public class ToolHelper {
     if (isVulkan) {
       command = new String[] {
           ToolPaths.glslangValidator(),
-          "-V100",
+          "-V",
+          "--target-env",
+          "spirv1.3",
           file.toString()
       };
     } else {

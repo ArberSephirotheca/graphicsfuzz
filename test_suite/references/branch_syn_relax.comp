@@ -23,6 +23,6 @@ void main() {
         // for memory semantics spec, see: https://registry.khronos.org/SPIR-V/specs/unified1/SPIRV.html#Memory_Semantics_-id-
         atomicStore(buf[gid + 1], uint(2), 4, 64, 0);
     } else{
-        atomicStore(buf[(gid + 1) % subgroup_size], uint(3), 4, 64, 0);
+        atomicStore(buf[(gid + 1) % subgroup_size], uint(2), 4, 64, 0);
     }
 }

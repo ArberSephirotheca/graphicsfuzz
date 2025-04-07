@@ -1,0 +1,58 @@
+#version 460
+struct _GLF_struct_1 {
+ uvec2 _f0;
+ vec4 _f1;
+ mat2x4 _f2;
+ uvec2 _f3;
+ mat4x2 _f4;
+ mat3 _f5;
+} ;
+
+struct _GLF_struct_0 {
+ uint subgroup_size;
+ mat2 _f0;
+} ;
+
+struct _GLF_struct_2 {
+ ivec3 _f0;
+ ivec4 _f1;
+ _GLF_struct_0 _f2;
+ bool _f3;
+ _GLF_struct_1 _f4;
+} ;
+
+struct _GLF_struct_3 {
+ vec2 _f0;
+ _GLF_struct_2 _f1;
+ bool _f2;
+} ;
+
+layout(set = 0, binding = 0) uniform buf0 {
+ vec2 injectionSwitch;
+};
+#extension GL_KHR_shader_subgroup_basic : enable
+#extension GL_KHR_shader_subgroup_ballot : enable
+#extension GL_KHR_shader_subgroup_vote : enable
+#extension GL_KHR_shader_subgroup_basic : enable
+#extension GL_KHR_memory_scope_semantics : enable
+layout(set = 0, binding = 0) buffer Buf {
+ uint buf[];
+};
+layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
+void main()
+{
+ uint subgroup_id = gl_SubgroupID;
+ _GLF_struct_3 _GLF_struct_replacement_3 = _GLF_struct_3(vec2(1.0), _GLF_struct_2(ivec3(1), ivec4(1), _GLF_struct_0(gl_SubgroupSize, mat2(1.0)), true, _GLF_struct_1(uvec2(1u), vec4(1.0), mat2x4(1.0), uvec2(1u), mat4x2(1.0), mat3(1.0))), true);
+ uint gid = gl_GlobalInvocationID.x;
+ uint subgroup_local_id = gl_SubgroupInvocationID;
+ if(subgroup_local_id + 1 < _GLF_struct_replacement_3._f1._f2.subgroup_size)
+  {
+   atomicStore(buf[gid + 1], uint(2), 4, 64, 0);
+   subgroupAll(true);
+  }
+ else
+  {
+   atomicStore(buf[(gid + 1) % _GLF_struct_replacement_3._f1._f2.subgroup_size], uint(2), 4, 64, 0);
+   subgroupAll(true);
+  }
+}

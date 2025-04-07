@@ -298,7 +298,7 @@ public final class PipelineInfo {
   public void addUniformBinding(String uniformName, boolean pushConstant, int number) {
     assert hasUniform(uniformName);
     if (pushConstant) {
-      dictionary.getAsJsonObject(uniformName).addProperty("push_constant", true);
+      dictionary.getAsJsonObject(uniformName).addProperty("binding", number);
     } else {
       dictionary.getAsJsonObject(uniformName).addProperty("binding", number);
     }

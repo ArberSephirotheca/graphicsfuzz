@@ -20,7 +20,7 @@ void main() {
         buf[gid + 1] = 2;
         subgroupAll(true); // this really does nothing but acts like a subgroup barrier
     } else {
-        buf[(gid + 1) % subgroup_size] = 3;
+        buf[(gid + 1) % subgroup_size] = 2;
         subgroupAll(true); // this really does nothing but acts like a subgroup barrier
     }
 }

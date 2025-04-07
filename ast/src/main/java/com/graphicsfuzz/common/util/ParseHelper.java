@@ -53,7 +53,7 @@ import org.apache.commons.io.FilenameUtils;
 
 public class ParseHelper {
 
-  public static final String END_OF_GRAPHICSFUZZ_DEFINES = "// END OF GENERATED HEADER";
+  public static final String END_OF_GRAPHICSFUZZ_DEFINES = "";
 
   public static Optional<TranslationUnit> maybeParseShader(File shader)
       throws IOException, ParseTimeoutException, InterruptedException, GlslParserException {

@@ -1,0 +1,28 @@
+Date and Time:
+06/04/2025 23:54:05
+Computer:
+archlinux
+
+storing vulkaninfo to: results/output8/vulkaninfo.txt
+
+
+Finished running tests!
+
+writing simple ascii table to:
+results/output8/simple_final_results-2025-04-06.txt
+
+writing iteration-based ascii table to:
+results/output8/iteration_based_final_results-2025-04-06.txt
+
+writing simple csv table to:
+results/output8/simple_final_results-2025-04-06.csv
+
+writing simple csv table to:
+results/output8/simple_final_results-2025-04-06.csv
+
+writing colored html table to:
+results/output8/html-colored-table2025-04-06.html
+
+
+Execution time (s):
+0.02647995948791504

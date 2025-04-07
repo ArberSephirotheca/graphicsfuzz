@@ -23,7 +23,7 @@ void main() {
 	    atomicStore(buf[gid + 1], uint(2), 4, 64, 4);
         subgroupAll(true); // this really does nothing but acts like a subgroup barrier
     } else {
-        atomicStore(buf[(gid + 1) % subgroup_size], uint(3), 4, 64, 4);
+        atomicStore(buf[(gid + 1) % subgroup_size], uint(2), 4, 64, 4);
         subgroupAll(true); // this really does nothing but acts like a subgroup barrier
     }
 }

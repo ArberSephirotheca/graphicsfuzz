@@ -21,6 +21,6 @@ void main() {
     if (subgroup_local_id + 1 < subgroup_size) {
         buf[gid + 1] = 2;
     } else{
-        buf[(gid + 1) % subgroup_size] = 3;
+        buf[(gid + 1) % subgroup_size] = 2;
     }
 }

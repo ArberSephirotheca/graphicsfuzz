@@ -96,10 +96,10 @@ public class GlslShaderJobTest {
       + "}";
 
   private static final String VERT_SHADER_WITH_BINDINGS = ""
-      + "layout(set = 0, binding = 0) uniform buf0 { float a; };"
-      + "layout(set = 0, binding = 1) uniform buf1 { float b; };"
-      + "layout(set = 0, binding = 2) uniform buf2 { int c; };"
-      + "layout(set = 0, binding = 3) uniform buf3 { vec2 d; };"
+      + "layout(set = 0, binding = 1) uniform buf0 { float a; };"
+      + "layout(set = 0, binding = 2) uniform buf1 { float b; };"
+      + "layout(set = 0, binding = 3) uniform buf2 { int c; };"
+      + "layout(set = 0, binding = 4) uniform buf3 { vec2 d; };"
       + "void main() { }";
 
   private static final String FRAG_SHADER_WITH_BINDINGS = ""
@@ -262,11 +262,11 @@ public class GlslShaderJobTest {
       + "}";
 
   private static final String VERT_SHADER_WITH_BINDINGS_MULTIPLE_VARIABLES_PER_DECLARATION = ""
-      + "layout(set = 0, binding = 0) uniform buf0 { float a; };\n"
-      + "layout(set = 0, binding = 1) uniform buf1 { float b; };\n"
-      + "layout(set = 0, binding = 2) uniform buf2 { int c; };\n"
-      + "layout(set = 0, binding = 3) uniform buf3 { int d; };\n"
-      + "layout(set = 0, binding = 4) uniform buf4 { vec2 e; };\n"
+      + "layout(set = 0, binding = 1) uniform buf0 { float a; };\n"
+      + "layout(set = 0, binding = 2) uniform buf1 { float b; };\n"
+      + "layout(set = 0, binding = 3) uniform buf2 { int c; };\n"
+      + "layout(set = 0, binding = 4) uniform buf3 { int d; };\n"
+      + "layout(set = 0, binding = 5) uniform buf4 { vec2 e; };\n"
       + "void main() { }\n";
 
   private static final String FRAG_SHADER_WITH_BINDINGS_MULTIPLE_VARIABLES_PER_DECLARATION = ""

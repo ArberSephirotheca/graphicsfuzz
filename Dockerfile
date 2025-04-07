@@ -51,8 +51,8 @@ FROM builder AS builder-final
 WORKDIR /opt/graphicsfuzz/temp
 COPY test_suite/references /opt/graphicsfuzz/temp/references
 COPY test_suite/donors /opt/graphicsfuzz/temp/donors
-RUN glsl-generate ./references ./donors 100 syn /output
+RUN glsl-generate --vulkan ./references ./donors 100 syn /output
 
 FROM scratch AS final
-COPY --from=builder-final /output /output
+COPY --from=builder-final /output test_suite/output
 

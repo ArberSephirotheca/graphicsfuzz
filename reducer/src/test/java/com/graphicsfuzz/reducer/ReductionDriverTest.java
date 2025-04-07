@@ -581,7 +581,7 @@ public class ReductionDriverTest {
         + "layout(push_constant) uniform buf_push {\n"
         + " float a;\n"
         + "};\n"
-        + "layout(set = 0, binding = 0) uniform buf0 {\n"
+        + "layout(set = 0, binding = 1) uniform buf0 {\n"
         + " float b;\n"
         + "};\n"
         + "void main() {\n"
