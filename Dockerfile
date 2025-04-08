@@ -47,12 +47,24 @@ RUN cd graphicsfuzz && \
 ENV PATH="/opt/graphicsfuzz/graphicsfuzz/target/graphicsfuzz/bin/Linux:${PATH}"
 ENV PATH="/opt/graphicsfuzz/graphicsfuzz/target/graphicsfuzz/python/drivers:${PATH}"
 
-FROM builder AS builder-final
+FROM builder AS generate
 WORKDIR /opt/graphicsfuzz/temp
 COPY test_suite/references /opt/graphicsfuzz/temp/references
 COPY test_suite/donors /opt/graphicsfuzz/temp/donors
 RUN glsl-generate --vulkan ./references ./donors 100 syn /output
 
-FROM scratch AS final
-COPY --from=builder-final /output test_suite/all_tests
+FROM scratch AS generate-final
+COPY --from=generate /output test_suite/all_tests
+
+
+FROM builder AS reduce
+WORKDIR /opt
+COPY test_suite/all_tests/syn_subgroup_op_release/variant_051.comp /opt/reduce/reduce.comp
+COPY test_suite/all_tests/syn_subgroup_op_release/variant_051.json /opt/reduce/reduce.json
+COPY graphicsfuzz/src/main/scripts/examples/glsl-reduce-walkthrough /opt/reduce/examples
+ENV PATH="/opt/reduce:${PATH}"
+RUN glsl-reduce /opt/reduce/reduce.json interestingness_test --output reduction_results
+
+FROM scratch AS reduce-final
+COPY --from=reduce /opt/reduction_results test_suite/all_tests
 
