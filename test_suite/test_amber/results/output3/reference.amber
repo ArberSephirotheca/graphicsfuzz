@@ -17,8 +17,11 @@ void main()
  uint subgroup_id = gl_SubgroupID;
  uint subgroup_size = gl_SubgroupSize;
  uint gid = gl_GlobalInvocationID.x;
+ uint num_workgroup = gl_NumWorkGroups.x;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = num_workgroup * workgroup_size;
  buf[gid] = 1;
- buf[(gid + 1) % subgroup_size] = 2;
+ buf[(gid + 1) % total_threads] = 2;
 }
 
 END

@@ -37,12 +37,13 @@ layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
  uint subgroup_id = gl_SubgroupID;
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  return;
  uint subgroup_size = gl_SubgroupSize;
  uint gid = gl_GlobalInvocationID.x;
+ uint num_workgroup = gl_NumWorkGroups.x;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = num_workgroup * _GLF_IDENTITY(workgroup_size, clamp(workgroup_size, _GLF_IDENTITY(workgroup_size, (_GLF_TRUE(true, (injectionSwitch.x < injectionSwitch.y)) ? _GLF_IDENTITY(workgroup_size, 1u * (workgroup_size)) : _GLF_FUZZED(123364u))), _GLF_IDENTITY(workgroup_size, (_GLF_IDENTITY(workgroup_size, (workgroup_size) / 1u)) / 1u)));
  buf[gid] = 1;
- atomicStore(buf[(gid + 1) % subgroup_size], uint(2), 4, 64, 0);
+ atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 0);
 }
 
 END

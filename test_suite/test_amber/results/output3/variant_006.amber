@@ -22,7 +22,7 @@ SHADER compute test GLSL
 #endif
 
 
-layout(set = 0, binding = 1) uniform buf1 {
+layout(set = 0, binding = 0) uniform buf0 {
  vec2 injectionSwitch;
 };
 #extension GL_KHR_shader_subgroup_basic : enable
@@ -35,24 +35,16 @@ layout(set = 0, binding = 0) buffer Buf {
 layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
- uvec2 GLF_merged2_0_1_3_1_1_11gidsubgroup_id;
  uint subgroup_id = gl_SubgroupID;
- GLF_merged2_0_1_3_1_1_11gidsubgroup_id.y = subgroup_id;
  uint subgroup_size = gl_SubgroupSize;
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  return;
  uint gid = gl_GlobalInvocationID.x;
- GLF_merged2_0_1_3_1_1_11gidsubgroup_id.x = gid;
- buf[GLF_merged2_0_1_3_1_1_11gidsubgroup_id.x] = 1;
- buf[(GLF_merged2_0_1_3_1_1_11gidsubgroup_id.x + 1) % subgroup_size] = 2;
+ uint num_workgroup = gl_NumWorkGroups.x;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = num_workgroup * workgroup_size;
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  return;
+ buf[gid] = 1;
+ buf[(gid + 1) % total_threads] = 2;
 }
 
 END

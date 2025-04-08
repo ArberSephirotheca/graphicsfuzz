@@ -4,6 +4,24 @@ SET ENGINE_DATA fence_timeout_ms 10000
 
 SHADER compute test GLSL
 #version 460
+
+#ifndef REDUCER
+#define _GLF_ZERO(X, Y)                   (Y)
+#define _GLF_ONE(X, Y)                    (Y)
+#define _GLF_FALSE(X, Y)                  (Y)
+#define _GLF_TRUE(X, Y)                   (Y)
+#define _GLF_IDENTITY(X, Y)               (Y)
+#define _GLF_DEAD(X)                      (X)
+#define _GLF_FUZZED(X)                    (X)
+#define _GLF_WRAPPED_LOOP(X)              X
+#define _GLF_WRAPPED_IF_TRUE(X)           X
+#define _GLF_WRAPPED_IF_FALSE(X)          X
+#define _GLF_SWITCH(X)                    X
+#define _GLF_MAKE_IN_BOUNDS_INT(IDX, SZ)  clamp(IDX, 0, SZ - 1)
+#define _GLF_MAKE_IN_BOUNDS_UINT(IDX, SZ) clamp(IDX, 0u, SZ - 1u)
+#endif
+
+
 layout(set = 0, binding = 1) uniform buf1 {
  vec2 injectionSwitch;
 };
@@ -17,30 +35,42 @@ layout(set = 0, binding = 0) buffer Buf {
 layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
- uvec2 GLF_merged2_0_1_3_1_1_17gidsubgroup_local_id;
- uvec2 GLF_merged2_0_1_3_1_1_11gidsubgroup_id;
- uvec4 GLF_merged4_0_1_3_1_1_11_2_1_17_3_1_13gidsubgroup_idsubgroup_local_idsubgroup_size;
  uint subgroup_id = gl_SubgroupID;
- GLF_merged2_0_1_3_1_1_11gidsubgroup_id.y = subgroup_id;
- GLF_merged4_0_1_3_1_1_11_2_1_17_3_1_13gidsubgroup_idsubgroup_local_idsubgroup_size.y = GLF_merged2_0_1_3_1_1_11gidsubgroup_id.y;
  uint subgroup_size = gl_SubgroupSize;
- GLF_merged4_0_1_3_1_1_11_2_1_17_3_1_13gidsubgroup_idsubgroup_local_idsubgroup_size.w = subgroup_size;
+ if(_GLF_DEAD(false))
+  return;
  uint gid = gl_GlobalInvocationID.x;
- GLF_merged2_0_1_3_1_1_17gidsubgroup_local_id.x = gid;
- GLF_merged2_0_1_3_1_1_11gidsubgroup_id.x = GLF_merged2_0_1_3_1_1_17gidsubgroup_local_id.x;
- GLF_merged4_0_1_3_1_1_11_2_1_17_3_1_13gidsubgroup_idsubgroup_local_idsubgroup_size.x = GLF_merged2_0_1_3_1_1_11gidsubgroup_id.x;
+ if(_GLF_DEAD(false))
+  return;
  uint subgroup_local_id = gl_SubgroupInvocationID;
- GLF_merged2_0_1_3_1_1_17gidsubgroup_local_id.y = subgroup_local_id;
- GLF_merged4_0_1_3_1_1_11_2_1_17_3_1_13gidsubgroup_idsubgroup_local_idsubgroup_size.z = GLF_merged2_0_1_3_1_1_17gidsubgroup_local_id.y;
- if(GLF_merged4_0_1_3_1_1_11_2_1_17_3_1_13gidsubgroup_idsubgroup_local_idsubgroup_size.z + 1 < GLF_merged4_0_1_3_1_1_11_2_1_17_3_1_13gidsubgroup_idsubgroup_local_idsubgroup_size.w)
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  return;
+ uint num_workgroup = gl_NumWorkGroups.x;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  return;
+ uint total_threads = num_workgroup * workgroup_size;
+ if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
+  return;
+ if(_GLF_DEAD(false))
+  return;
+ if(subgroup_local_id + 1 < subgroup_size)
   {
-   buf[GLF_merged4_0_1_3_1_1_11_2_1_17_3_1_13gidsubgroup_idsubgroup_local_idsubgroup_size.x + 1] = 2;
-   subgroupAll(true);
+   buf[(gid + 1) % total_threads] = 2;
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      return;
+     return;
+    }
+   subgroupAll(false);
   }
  else
   {
-   buf[(GLF_merged4_0_1_3_1_1_11_2_1_17_3_1_13gidsubgroup_idsubgroup_local_idsubgroup_size.x + 1) % GLF_merged4_0_1_3_1_1_11_2_1_17_3_1_13gidsubgroup_idsubgroup_local_idsubgroup_size.w] = 2;
+   buf[(gid + 1) % total_threads] = 2;
    subgroupAll(true);
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    return;
   }
 }
 

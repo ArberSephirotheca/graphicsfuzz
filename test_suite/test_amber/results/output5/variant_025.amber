@@ -22,6 +22,11 @@ SHADER compute test GLSL
 #endif
 
 
+struct _GLF_struct_0 {
+ uvec4 _f0;
+ uint subgroup_id;
+} ;
+
 layout(set = 0, binding = 1) uniform buf1 {
  vec2 injectionSwitch;
 };
@@ -36,13 +41,21 @@ layout(set = 0, binding = 0) buffer Buf {
 layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
- uint subgroup_id = gl_SubgroupID;
+ uvec3 GLF_merged3_0_1_3_1_1_13_2_1_13gidnum_workgrouptotal_threads;
+ uvec2 GLF_merged2_0_1_11_1_1_13subgroup_idsubgroup_size;
+ _GLF_struct_0 _GLF_struct_replacement_0 = _GLF_struct_0(uvec4(1u), gl_SubgroupID);
+ GLF_merged2_0_1_11_1_1_13subgroup_idsubgroup_size.x = _GLF_struct_replacement_0.subgroup_id;
  uint subgroup_size = gl_SubgroupSize;
+ GLF_merged2_0_1_11_1_1_13subgroup_idsubgroup_size.y = subgroup_size;
  uint gid = gl_GlobalInvocationID.x;
- buf[gid] = 1;
- if(_GLF_DEAD(false))
-  return;
- atomicStore(buf[(_GLF_IDENTITY(gid + 1, max(_GLF_IDENTITY(gid + 1, min(gid + 1, gid + 1)), _GLF_IDENTITY(gid + 1, (gid + 1) + 0u)))) % subgroup_size], uint(2), 4, 64, 4);
+ GLF_merged3_0_1_3_1_1_13_2_1_13gidnum_workgrouptotal_threads.x = gid;
+ uint num_workgroup = gl_NumWorkGroups.x;
+ GLF_merged3_0_1_3_1_1_13_2_1_13gidnum_workgrouptotal_threads.y = num_workgroup;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = GLF_merged3_0_1_3_1_1_13_2_1_13gidnum_workgrouptotal_threads.y * workgroup_size;
+ GLF_merged3_0_1_3_1_1_13_2_1_13gidnum_workgrouptotal_threads.z = total_threads;
+ buf[GLF_merged3_0_1_3_1_1_13_2_1_13gidnum_workgrouptotal_threads.x] = _GLF_IDENTITY(1, (1) | 0);
+ atomicStore(buf[(GLF_merged3_0_1_3_1_1_13_2_1_13gidnum_workgrouptotal_threads.x + 1) % GLF_merged3_0_1_3_1_1_13_2_1_13gidnum_workgrouptotal_threads.z], uint(2), 4, _GLF_IDENTITY(64, (64) | (64)), 4);
 }
 
 END

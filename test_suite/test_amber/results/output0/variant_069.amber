@@ -4,7 +4,7 @@ SET ENGINE_DATA fence_timeout_ms 10000
 
 SHADER compute test GLSL
 #version 460
-layout(set = 0, binding = 0) uniform buf0 {
+layout(set = 0, binding = 1) uniform buf1 {
  vec2 injectionSwitch;
 };
 #extension GL_KHR_shader_subgroup_basic : enable
@@ -22,14 +22,18 @@ void main()
  uint subgroup_size = gl_SubgroupSize;
  uint gid = gl_GlobalInvocationID.x;
  uint subgroup_local_id = gl_SubgroupInvocationID;
+ uint num_workgroup = gl_NumWorkGroups.x;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = num_workgroup * workgroup_size;
  buf[gid] = 1;
  if(subgroup_local_id + 1 < subgroup_size)
   {
-   buf[gid + 1] = 2;
+   int i = 0;
+   buf[(gid + 1) % total_threads] = 2;
   }
  else
   {
-   buf[(gid + 1) % subgroup_size] = 2;
+   buf[(gid + 1) % total_threads] = 2;
   }
 }
 

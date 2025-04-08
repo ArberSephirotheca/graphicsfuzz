@@ -22,7 +22,72 @@ SHADER compute test GLSL
 #endif
 
 
-layout(set = 0, binding = 0) uniform buf0 {
+struct _GLF_struct_7 {
+ mat4 _f0;
+} ;
+
+struct _GLF_struct_6 {
+ uint _f0;
+ mat4x2 _f1;
+ bvec2 _f2;
+ uint _f3;
+ uint _f4;
+} ;
+
+struct _GLF_struct_8 {
+ _GLF_struct_6 _f0;
+ _GLF_struct_7 _f1;
+ uint subgroup_size;
+} ;
+
+struct _GLF_struct_4 {
+ mat4 _f0;
+} ;
+
+struct _GLF_struct_3 {
+ ivec2 _f0;
+} ;
+
+struct _GLF_struct_2 {
+ vec2 _f0;
+ vec2 _f1;
+ uvec3 _f2;
+ uvec3 _f3;
+} ;
+
+struct _GLF_struct_1 {
+ uint _f0;
+ bvec3 _f1;
+ uvec2 _f2;
+ vec2 _f3;
+ mat3 _f4;
+} ;
+
+struct _GLF_struct_0 {
+ mat3 _f0;
+ mat4x3 _f1;
+ mat4 _f2;
+ bool _f3;
+ mat2 _f4;
+ mat4 _f5;
+} ;
+
+struct _GLF_struct_5 {
+ _GLF_struct_0 _f0;
+ _GLF_struct_1 _f1;
+ _GLF_struct_2 _f2;
+ mat3 _f3;
+ _GLF_struct_3 _f4;
+ float _f5;
+ _GLF_struct_4 _f6;
+} ;
+
+struct _GLF_struct_9 {
+ _GLF_struct_5 _f0;
+ _GLF_struct_8 _f1;
+} ;
+
+layout(set = 0, binding = 1) uniform buf1 {
  vec2 injectionSwitch;
 };
 #extension GL_KHR_shader_subgroup_basic : enable
@@ -35,24 +100,27 @@ layout(set = 0, binding = 0) buffer Buf {
 layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
- if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-  barrier();
  uint subgroup_id = gl_SubgroupID;
- if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
-  barrier();
- uint subgroup_size = gl_SubgroupSize;
- if(_GLF_DEAD(false))
-  barrier();
+ _GLF_struct_9 _GLF_struct_replacement_9 = _GLF_struct_9(_GLF_struct_5(_GLF_struct_0(mat3(1.0), mat4x3(1.0), mat4(1.0), true, mat2(1.0), mat4(1.0)), _GLF_struct_1(1u, bvec3(true), uvec2(1u), vec2(1.0), mat3(1.0)), _GLF_struct_2(vec2(1.0), vec2(1.0), uvec3(1u), uvec3(1u)), mat3(1.0), _GLF_struct_3(ivec2(1)), 1.0, _GLF_struct_4(mat4(1.0))), _GLF_struct_8(_GLF_struct_6(1u, mat4x2(1.0), bvec2(true), 1u, 1u), _GLF_struct_7(mat4(1.0)), gl_SubgroupSize));
  uint gid = gl_GlobalInvocationID.x;
  uint subgroup_local_id = gl_SubgroupInvocationID;
- if(subgroup_local_id + 1 < subgroup_size)
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ uint num_workgroup = gl_NumWorkGroups.x;
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = num_workgroup * workgroup_size;
+ if(_GLF_DEAD(false))
+  barrier();
+ if(subgroup_local_id + 1 < _GLF_struct_replacement_9._f1.subgroup_size)
   {
-   buf[gid + 1] = 2;
-   subgroupAll(true);
+   buf[(gid + 1) % total_threads] = 2;
+   subgroupAll(false);
   }
  else
   {
-   buf[(gid + 1) % subgroup_size] = 2;
+   buf[(gid + 1) % total_threads] = 2;
    subgroupAll(true);
   }
 }

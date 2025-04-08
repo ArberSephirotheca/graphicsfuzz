@@ -13,15 +13,12 @@ layout(set = 0, binding = 0) buffer Buf {
 layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
- uvec2 GLF_merged2_0_1_3_1_1_11gidsubgroup_id;
- uvec2 GLF_merged2_0_1_3_1_1_13gidsubgroup_size;
  uint subgroup_id = gl_SubgroupID;
- GLF_merged2_0_1_3_1_1_11gidsubgroup_id.y = subgroup_id;
  uint subgroup_size = gl_SubgroupSize;
- GLF_merged2_0_1_3_1_1_13gidsubgroup_size.y = subgroup_size;
  uint gid = gl_GlobalInvocationID.x;
- GLF_merged2_0_1_3_1_1_11gidsubgroup_id.x = gid;
- GLF_merged2_0_1_3_1_1_13gidsubgroup_size.x = GLF_merged2_0_1_3_1_1_11gidsubgroup_id.x;
- buf[GLF_merged2_0_1_3_1_1_13gidsubgroup_size.x] = 1;
- atomicStore(buf[(GLF_merged2_0_1_3_1_1_13gidsubgroup_size.x + 1) % GLF_merged2_0_1_3_1_1_13gidsubgroup_size.y], uint(2), 4, 64, 0);
+ uint num_workgroup = gl_NumWorkGroups.x;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = num_workgroup * workgroup_size;
+ buf[gid] = 1;
+ atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 0);
 }

@@ -22,7 +22,7 @@ SHADER compute test GLSL
 #endif
 
 
-layout(set = 0, binding = 0) uniform buf0 {
+layout(set = 0, binding = 1) uniform buf1 {
  vec2 injectionSwitch;
 };
 #extension GL_KHR_shader_subgroup_basic : enable
@@ -36,39 +36,28 @@ layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
  uint subgroup_id = gl_SubgroupID;
- if(_GLF_DEAD(false))
-  return;
  uint subgroup_size = gl_SubgroupSize;
  uint gid = gl_GlobalInvocationID.x;
  uint subgroup_local_id = gl_SubgroupInvocationID;
+ uint num_workgroup = gl_NumWorkGroups.x;
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_IDENTITY(false, _GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)) || (false))))
+    return;
+   return;
+  }
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = num_workgroup * workgroup_size;
  if(subgroup_local_id + 1 < subgroup_size)
   {
-   buf[gid + 1] = 2;
+   buf[(gid + 1) % total_threads] = 2;
    if(_GLF_DEAD(false))
     return;
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    return;
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      return;
-     if(_GLF_DEAD(false))
-      return;
-     return;
-    }
-   subgroupAll(true);
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      return;
-     return;
-    }
-   if(_GLF_DEAD(false))
-    return;
+   subgroupAll(false);
   }
  else
   {
-   buf[(gid + 1) % subgroup_size] = 2;
+   buf[(gid + 1) % total_threads] = 2;
    subgroupAll(true);
   }
 }

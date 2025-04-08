@@ -54,5 +54,5 @@ COPY test_suite/donors /opt/graphicsfuzz/temp/donors
 RUN glsl-generate --vulkan ./references ./donors 100 syn /output
 
 FROM scratch AS final
-COPY --from=builder-final /output test_suite/output
+COPY --from=builder-final /output test_suite/all_tests
 

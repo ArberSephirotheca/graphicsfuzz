@@ -38,16 +38,24 @@ void main()
 {
  uint subgroup_id = gl_SubgroupID;
  uint subgroup_size = gl_SubgroupSize;
- uint gid = gl_GlobalInvocationID.x;
+ uint gid = _GLF_IDENTITY(gl_GlobalInvocationID, uvec3(0u, 0u, 0u) ^ (gl_GlobalInvocationID)).x;
+ if(_GLF_DEAD(false))
+  return;
  uint subgroup_local_id = gl_SubgroupInvocationID;
+ uint num_workgroup = gl_NumWorkGroups.x;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = num_workgroup * workgroup_size;
  buf[gid] = 1;
- if(subgroup_local_id + 1 < subgroup_size)
+ if(_GLF_IDENTITY(subgroup_local_id + 1 < subgroup_size, (subgroup_local_id + 1 < subgroup_size) && true))
   {
-   atomicStore(buf[gid + 1], uint(2), 4, 64, 0);
+   if(_GLF_DEAD(false))
+    return;
+   int i = 0;
+   atomicStore(buf[(gid + 1) % total_threads], uint(_GLF_IDENTITY(2, (_GLF_IDENTITY(2, 0 ^ (2))) >> 0)), 4, 64, 0);
   }
  else
   {
-   atomicStore(buf[(_GLF_IDENTITY(gid, (gid) - 0u) + 1) % subgroup_size], uint(2), 4, 64, 0);
+   atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 0);
   }
 }
 

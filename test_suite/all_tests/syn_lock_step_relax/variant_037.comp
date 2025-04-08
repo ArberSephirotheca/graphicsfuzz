@@ -1,5 +1,40 @@
 #version 460
-layout(set = 0, binding = 1) uniform buf1 {
+struct _GLF_struct_2 {
+ float _f0;
+ mat2x3 _f1;
+ mat2 _f2;
+ uvec4 _f3;
+ uvec2 _f4;
+} ;
+
+struct _GLF_struct_1 {
+ mat2 _f0;
+ mat3x2 _f1;
+} ;
+
+struct _GLF_struct_0 {
+ mat2 _f0;
+ uvec2 _f1;
+} ;
+
+struct _GLF_struct_3 {
+ mat2x4 _f0;
+ ivec2 _f1;
+ ivec3 _f2;
+ _GLF_struct_0 _f3;
+ _GLF_struct_1 _f4;
+ mat4x2 _f5;
+ _GLF_struct_2 _f6;
+} ;
+
+struct _GLF_struct_4 {
+ mat3x4 _f0;
+ uint num_workgroup;
+ bvec3 _f1;
+ _GLF_struct_3 _f2;
+} ;
+
+layout(set = 0, binding = 0) uniform buf0 {
  vec2 injectionSwitch;
 };
 #extension GL_KHR_shader_subgroup_basic : enable
@@ -16,6 +51,9 @@ void main()
  uint subgroup_id = gl_SubgroupID;
  uint subgroup_size = gl_SubgroupSize;
  uint gid = gl_GlobalInvocationID.x;
+ _GLF_struct_4 _GLF_struct_replacement_4 = _GLF_struct_4(mat3x4(1.0), gl_NumWorkGroups.x, bvec3(true), _GLF_struct_3(mat2x4(1.0), ivec2(1), ivec3(1), _GLF_struct_0(mat2(1.0), uvec2(1u)), _GLF_struct_1(mat2(1.0), mat3x2(1.0)), mat4x2(1.0), _GLF_struct_2(1.0, mat2x3(1.0), mat2(1.0), uvec4(1u), uvec2(1u))));
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = _GLF_struct_replacement_4.num_workgroup * workgroup_size;
  buf[gid] = 1;
- atomicStore(buf[(gid + 1) % subgroup_size], uint(2), 4, 64, 0);
+ atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 0);
 }

@@ -4,9 +4,91 @@ SET ENGINE_DATA fence_timeout_ms 10000
 
 SHADER compute test GLSL
 #version 460
+struct _GLF_struct_9 {
+ ivec4 _f0;
+ mat4x2 _f1;
+} ;
+
+struct _GLF_struct_8 {
+ mat3 _f0;
+ bool _f1;
+ vec3 _f2;
+} ;
+
+struct _GLF_struct_10 {
+ bool _f0;
+ _GLF_struct_8 _f1;
+ _GLF_struct_9 _f2;
+ mat3x2 _f3;
+ int _f4;
+} ;
+
+struct _GLF_struct_6 {
+ mat4x2 _f0;
+ bvec2 _f1;
+ int _f2;
+ mat3 _f3;
+} ;
+
+struct _GLF_struct_5 {
+ bvec3 _f0;
+ mat4x2 _f1;
+ mat4x3 _f2;
+ mat4x2 _f3;
+ vec2 _f4;
+} ;
+
+struct _GLF_struct_7 {
+ uvec4 _f0;
+ uint subgroup_size;
+ _GLF_struct_5 _f1;
+ ivec3 _f2;
+ _GLF_struct_6 _f3;
+} ;
+
+struct _GLF_struct_3 {
+ uvec4 _f0;
+} ;
+
+struct _GLF_struct_2 {
+ uvec4 _f0;
+} ;
+
+struct _GLF_struct_4 {
+ vec4 _f0;
+ _GLF_struct_2 _f1;
+ _GLF_struct_3 _f2;
+ ivec4 _f3;
+ bool _f4;
+ uvec2 _f5;
+ mat3x2 _f6;
+} ;
+
+struct _GLF_struct_1 {
+ mat4x2 _f0;
+} ;
+
+struct _GLF_struct_11 {
+ uvec4 _f0;
+ _GLF_struct_1 _f1;
+ _GLF_struct_4 _f2;
+ _GLF_struct_7 _f3;
+ _GLF_struct_10 _f4;
+} ;
+
 layout(set = 0, binding = 0) uniform buf0 {
  vec2 injectionSwitch;
 };
+struct _GLF_struct_0 {
+ uint total_threads;
+ ivec4 _f0;
+ ivec2 _f1;
+ bool _f2;
+ vec4 _f3;
+ mat4x3 _f4;
+ mat4x3 _f5;
+} ;
+
 #extension GL_KHR_shader_subgroup_basic : enable
 #extension GL_KHR_shader_subgroup_ballot : enable
 #extension GL_KHR_shader_subgroup_vote : enable
@@ -18,21 +100,22 @@ layout(set = 0, binding = 0) buffer Buf {
 layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
- uvec2 GLF_merged2_0_1_17_1_1_13subgroup_local_idsubgroup_size;
  uint subgroup_id = gl_SubgroupID;
- uint subgroup_size = gl_SubgroupSize;
- GLF_merged2_0_1_17_1_1_13subgroup_local_idsubgroup_size.y = subgroup_size;
+ _GLF_struct_11 _GLF_struct_replacement_11 = _GLF_struct_11(uvec4(1u), _GLF_struct_1(mat4x2(1.0)), _GLF_struct_4(vec4(1.0), _GLF_struct_2(uvec4(1u)), _GLF_struct_3(uvec4(1u)), ivec4(1), true, uvec2(1u), mat3x2(1.0)), _GLF_struct_7(uvec4(1u), gl_SubgroupSize, _GLF_struct_5(bvec3(true), mat4x2(1.0), mat4x3(1.0), mat4x2(1.0), vec2(1.0)), ivec3(1), _GLF_struct_6(mat4x2(1.0), bvec2(true), 1, mat3(1.0))), _GLF_struct_10(true, _GLF_struct_8(mat3(1.0), true, vec3(1.0)), _GLF_struct_9(ivec4(1), mat4x2(1.0)), mat3x2(1.0), 1));
  uint gid = gl_GlobalInvocationID.x;
  uint subgroup_local_id = gl_SubgroupInvocationID;
- GLF_merged2_0_1_17_1_1_13subgroup_local_idsubgroup_size.x = subgroup_local_id;
+ uint num_workgroup = gl_NumWorkGroups.x;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ _GLF_struct_0 _GLF_struct_replacement_0 = _GLF_struct_0(num_workgroup * workgroup_size, ivec4(1), ivec2(1), true, vec4(1.0), mat4x3(1.0), mat4x3(1.0));
  buf[gid] = 1;
- if(GLF_merged2_0_1_17_1_1_13subgroup_local_idsubgroup_size.x + 1 < GLF_merged2_0_1_17_1_1_13subgroup_local_idsubgroup_size.y)
+ if(subgroup_local_id + 1 < _GLF_struct_replacement_11._f3.subgroup_size)
   {
-   buf[gid + 1] = 2;
+   int i = 0;
+   buf[(gid + 1) % _GLF_struct_replacement_0.total_threads] = 2;
   }
  else
   {
-   buf[(gid + 1) % GLF_merged2_0_1_17_1_1_13subgroup_local_idsubgroup_size.y] = 2;
+   buf[(gid + 1) % _GLF_struct_replacement_0.total_threads] = 2;
   }
 }
 

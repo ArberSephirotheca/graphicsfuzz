@@ -4,7 +4,25 @@ SET ENGINE_DATA fence_timeout_ms 10000
 
 SHADER compute test GLSL
 #version 460
-layout(set = 0, binding = 1) uniform buf1 {
+
+#ifndef REDUCER
+#define _GLF_ZERO(X, Y)                   (Y)
+#define _GLF_ONE(X, Y)                    (Y)
+#define _GLF_FALSE(X, Y)                  (Y)
+#define _GLF_TRUE(X, Y)                   (Y)
+#define _GLF_IDENTITY(X, Y)               (Y)
+#define _GLF_DEAD(X)                      (X)
+#define _GLF_FUZZED(X)                    (X)
+#define _GLF_WRAPPED_LOOP(X)              X
+#define _GLF_WRAPPED_IF_TRUE(X)           X
+#define _GLF_WRAPPED_IF_FALSE(X)          X
+#define _GLF_SWITCH(X)                    X
+#define _GLF_MAKE_IN_BOUNDS_INT(IDX, SZ)  clamp(IDX, 0, SZ - 1)
+#define _GLF_MAKE_IN_BOUNDS_UINT(IDX, SZ) clamp(IDX, 0u, SZ - 1u)
+#endif
+
+
+layout(set = 0, binding = 0) uniform buf0 {
  vec2 injectionSwitch;
 };
 #extension GL_KHR_shader_subgroup_basic : enable
@@ -21,8 +39,23 @@ void main()
  uint subgroup_id = gl_SubgroupID;
  uint subgroup_size = gl_SubgroupSize;
  uint gid = gl_GlobalInvocationID.x;
- buf[gid] = 1;
- atomicStore(buf[(gid + 1) % subgroup_size], uint(2), 4, 64, 4);
+ uint num_workgroup = gl_NumWorkGroups.x;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = num_workgroup * workgroup_size;
+ if(_GLF_WRAPPED_IF_TRUE(true))
+  {
+   buf[gid] = 1;
+  }
+ else
+  {
+  }
+ if(_GLF_WRAPPED_IF_FALSE(false))
+  {
+  }
+ else
+  {
+   atomicStore(buf[(gid + 1) % total_threads], uint(_GLF_IDENTITY(2, (true ? _GLF_IDENTITY(2, clamp(_GLF_IDENTITY(2, min(2, 2)), 2, 2)) : _GLF_FUZZED(50764)))), 4, 64, 4);
+  }
 }
 
 END

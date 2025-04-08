@@ -31,30 +31,25 @@ layout(set = 0, binding = 0) buffer Buf {
 layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
  uint subgroup_id = gl_SubgroupID;
  uint subgroup_size = gl_SubgroupSize;
+ if(_GLF_DEAD(false))
+  barrier();
  uint gid = gl_GlobalInvocationID.x;
  uint subgroup_local_id = gl_SubgroupInvocationID;
+ uint num_workgroup = gl_NumWorkGroups.x;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = num_workgroup * workgroup_size;
  if(subgroup_local_id + 1 < subgroup_size)
   {
-   atomicStore(buf[gid + 1], uint(2), 4, 64, 0);
-   if(_GLF_DEAD(false))
+   atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 0);
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
-   subgroupAll(true);
+   subgroupAll(false);
   }
  else
   {
-   if(_GLF_DEAD(false))
-    barrier();
-   atomicStore(buf[(gid + 1) % subgroup_size], uint(2), 4, 64, 0);
+   atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 0);
    subgroupAll(true);
   }
 }

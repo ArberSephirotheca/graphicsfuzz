@@ -22,7 +22,7 @@ SHADER compute test GLSL
 #endif
 
 
-layout(set = 0, binding = 0) uniform buf0 {
+layout(set = 0, binding = 1) uniform buf1 {
  vec2 injectionSwitch;
 };
 #extension GL_KHR_shader_subgroup_basic : enable
@@ -35,21 +35,33 @@ layout(set = 0, binding = 0) buffer Buf {
 layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
+ uvec4 GLF_merged4_0_1_13_1_1_17_2_1_13_3_1_13num_workgroupsubgroup_local_idsubgroup_sizetotal_threads;
  uint subgroup_id = gl_SubgroupID;
  uint subgroup_size = gl_SubgroupSize;
+ GLF_merged4_0_1_13_1_1_17_2_1_13_3_1_13num_workgroupsubgroup_local_idsubgroup_sizetotal_threads.z = subgroup_size;
  uint gid = gl_GlobalInvocationID.x;
  uint subgroup_local_id = gl_SubgroupInvocationID;
- if(subgroup_local_id + 1 < subgroup_size)
+ GLF_merged4_0_1_13_1_1_17_2_1_13_3_1_13num_workgroupsubgroup_local_idsubgroup_sizetotal_threads.y = subgroup_local_id;
+ uint num_workgroup = gl_NumWorkGroups.x;
+ GLF_merged4_0_1_13_1_1_17_2_1_13_3_1_13num_workgroupsubgroup_local_idsubgroup_sizetotal_threads.x = num_workgroup;
+ uint workgroup_size = gl_WorkGroupSize.x;
+ uint total_threads = GLF_merged4_0_1_13_1_1_17_2_1_13_3_1_13num_workgroupsubgroup_local_idsubgroup_sizetotal_threads.x * workgroup_size;
+ GLF_merged4_0_1_13_1_1_17_2_1_13_3_1_13num_workgroupsubgroup_local_idsubgroup_sizetotal_threads.w = total_threads;
+ if(GLF_merged4_0_1_13_1_1_17_2_1_13_3_1_13num_workgroupsubgroup_local_idsubgroup_sizetotal_threads.y + 1 < GLF_merged4_0_1_13_1_1_17_2_1_13_3_1_13num_workgroupsubgroup_local_idsubgroup_sizetotal_threads.z)
   {
-   buf[gid + 1] = 2;
-   subgroupAll(true);
+   buf[(gid + 1) % GLF_merged4_0_1_13_1_1_17_2_1_13_3_1_13num_workgroupsubgroup_local_idsubgroup_sizetotal_threads.w] = 2;
+   subgroupAll(false);
   }
  else
   {
-   buf[(gid + 1) % subgroup_size] = 2;
+   if(_GLF_WRAPPED_IF_TRUE(true))
+    {
+     buf[(gid + 1) % GLF_merged4_0_1_13_1_1_17_2_1_13_3_1_13num_workgroupsubgroup_local_idsubgroup_sizetotal_threads.w] = 2;
+    }
+   else
+    {
+    }
    subgroupAll(true);
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
   }
 }
 

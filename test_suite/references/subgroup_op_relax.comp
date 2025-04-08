@@ -17,13 +17,16 @@ void main() {
 	uint subgroup_size = gl_SubgroupSize;
 	uint gid = gl_GlobalInvocationID.x;
     uint subgroup_local_id = gl_SubgroupInvocationID;
+    uint num_workgroup = gl_NumWorkGroups.x;
+    uint workgroup_size = gl_WorkGroupSize.x;
+    uint total_threads = num_workgroup * workgroup_size;
     if (subgroup_local_id + 1 < subgroup_size) {
         // scope: invocation, storage: buffer, memory semantics: relax
 	    // for memory semantics spec, see: https://registry.khronos.org/SPIR-V/specs/unified1/SPIRV.html#Memory_Semantics_-id-
-	    atomicStore(buf[gid + 1], uint(2), 4, 64, 0);
-        subgroupAll(true); // this really does nothing but acts like a subgroup barrier
+	    atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 0);
+        subgroupAll(false); // this really does nothing but acts like a subgroup barrier
     } else {
-        atomicStore(buf[(gid + 1) % subgroup_size], uint(2), 4, 64, 0);
+        atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 0);
         subgroupAll(true); // this really does nothing but acts like a subgroup barrier
     }
 }
