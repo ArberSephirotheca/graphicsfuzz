@@ -1,6 +1,6 @@
 Test File Name,All Passed
 reference,P,P
-variant_000,P,P
+variant_000,F,F
 variant_001,P,P
 variant_002,P,P
 variant_003,P,P
@@ -97,7 +97,7 @@ variant_093,P,P
 variant_094,P,P
 variant_095,P,P
 variant_096,P,P
-variant_097,P,P
+variant_097,F,F
 variant_098,P,P
 variant_099,P,P
-Total failures:,0,0
+Total failures:,2,2

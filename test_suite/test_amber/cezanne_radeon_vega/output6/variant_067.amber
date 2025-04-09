@@ -27,7 +27,6 @@ void main()
  uint virtual_gid = workgroup_base + subgroup_id * subgroup_size + subgroup_local_id;
  uint next_virtual_gid = workgroup_base + subgroup_id * subgroup_size + ((subgroup_local_id + 1) % subgroup_size);
  buf[virtual_gid] = 1;
- buf[virtual_gid] = 1;
  if(subgroup_local_id + 1 < subgroup_size)
   {
    buf[next_virtual_gid] = 2;

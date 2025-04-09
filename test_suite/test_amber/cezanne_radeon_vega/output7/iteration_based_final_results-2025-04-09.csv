@@ -18,7 +18,7 @@ variant_014,P,P
 variant_015,P,P
 variant_016,P,P
 variant_017,P,P
-variant_018,F (1/1),F
+variant_018,P,P
 variant_019,P,P
 variant_020,P,P
 variant_021,P,P
@@ -26,10 +26,10 @@ variant_022,P,P
 variant_023,P,P
 variant_024,P,P
 variant_025,P,P
-variant_026,P,P
+variant_026,F (1/1),F
 variant_027,P,P
 variant_028,P,P
-variant_029,P,P
+variant_029,F (1/1),F
 variant_030,P,P
 variant_031,P,P
 variant_032,P,P
@@ -46,11 +46,11 @@ variant_042,F (1/1),F
 variant_043,P,P
 variant_044,P,P
 variant_045,P,P
-variant_046,F (1/1),F
-variant_047,F (1/1),F
+variant_046,P,P
+variant_047,P,P
 variant_048,P,P
 variant_049,P,P
-variant_050,F (1/1),F
+variant_050,P,P
 variant_051,P,P
 variant_052,P,P
 variant_053,P,P
@@ -73,7 +73,7 @@ variant_069,P,P
 variant_070,P,P
 variant_071,P,P
 variant_072,P,P
-variant_073,F (1/1),F
+variant_073,P,P
 variant_074,P,P
 variant_075,P,P
 variant_076,P,P
@@ -88,7 +88,7 @@ variant_084,P,P
 variant_085,P,P
 variant_086,P,P
 variant_087,P,P
-variant_088,F (1/1),F
+variant_088,P,P
 variant_089,P,P
 variant_090,P,P
 variant_091,P,P
@@ -96,8 +96,8 @@ variant_092,P,P
 variant_093,P,P
 variant_094,P,P
 variant_095,P,P
-variant_096,P,P
-variant_097,F (1/1),F
+variant_096,F (1/1),F
+variant_097,P,P
 variant_098,P,P
-variant_099,P,P
-Total failures:,8,8
+variant_099,F (1/1),F
+Total failures:,5,5

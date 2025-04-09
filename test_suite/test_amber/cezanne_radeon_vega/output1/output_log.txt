@@ -1,5 +1,5 @@
 Date and Time:
-09/04/2025 00:23:53
+09/04/2025 15:54:50
 Computer:
 waterthrush
 
@@ -28,7 +28,7 @@ P
 generating amber test for: variant_097.comp in results/output1
 running test: variant_097.amber
 timeout -k 1 15 amber variant_097.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: reference.comp in results/output1
 running test: reference.amber
@@ -498,7 +498,7 @@ P
 generating amber test for: variant_000.comp in results/output1
 running test: variant_000.amber
 timeout -k 1 15 amber variant_000.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_098.comp in results/output1
 running test: variant_098.amber
@@ -530,4 +530,4 @@ results/output1/html-colored-table2025-04-09.html
 
 
 Execution time (s):
-207.250563621521
+210.8038728237152
