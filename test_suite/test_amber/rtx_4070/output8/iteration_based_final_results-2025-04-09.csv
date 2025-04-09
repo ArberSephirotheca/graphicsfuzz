@@ -1,30 +1,30 @@
 Test File Name,All Passed
 reference,P,P
 variant_000,P,P
-variant_001,P,P
+variant_001,F (1/1),F
 variant_002,P,P
 variant_003,P,P
 variant_004,P,P
-variant_005,F (1/1),F
+variant_005,P,P
 variant_006,P,P
 variant_007,P,P
 variant_008,P,P
 variant_009,P,P
 variant_010,P,P
-variant_011,P,P
+variant_011,F (1/1),F
 variant_012,P,P
 variant_013,P,P
 variant_014,P,P
-variant_015,F (1/1),F
-variant_016,P,P
+variant_015,P,P
+variant_016,F (1/1),F
 variant_017,P,P
 variant_018,P,P
-variant_019,P,P
+variant_019,F (1/1),F
 variant_020,P,P
 variant_021,P,P
 variant_022,P,P
 variant_023,P,P
-variant_024,P,P
+variant_024,F (1/1),F
 variant_025,P,P
 variant_026,P,P
 variant_027,P,P
@@ -32,7 +32,7 @@ variant_028,P,P
 variant_029,P,P
 variant_030,P,P
 variant_031,P,P
-variant_032,F (1/1),F
+variant_032,P,P
 variant_033,P,P
 variant_034,P,P
 variant_035,P,P
@@ -58,7 +58,7 @@ variant_054,P,P
 variant_055,P,P
 variant_056,P,P
 variant_057,P,P
-variant_058,P,P
+variant_058,F (1/1),F
 variant_059,P,P
 variant_060,P,P
 variant_061,P,P
@@ -95,9 +95,9 @@ variant_091,P,P
 variant_092,P,P
 variant_093,P,P
 variant_094,P,P
-variant_095,P,P
-variant_096,F (1/1),F
-variant_097,F (1/1),F
-variant_098,P,P
+variant_095,F (1/1),F
+variant_096,P,P
+variant_097,P,P
+variant_098,F (1/1),F
 variant_099,P,P
-Total failures:,5,5
+Total failures:,8,8

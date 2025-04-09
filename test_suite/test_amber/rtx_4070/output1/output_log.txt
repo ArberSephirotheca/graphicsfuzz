@@ -1,5 +1,5 @@
 Date and Time:
-09/04/2025 00:22:39
+09/04/2025 15:53:06
 Computer:
 shrike
 
@@ -128,7 +128,7 @@ P
 generating amber test for: variant_000.comp in results/output1
 running test: variant_000.amber
 timeout -k 1 15 amber variant_000.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_096.comp in results/output1
 running test: variant_096.amber
@@ -298,7 +298,7 @@ P
 generating amber test for: variant_097.comp in results/output1
 running test: variant_097.amber
 timeout -k 1 15 amber variant_097.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_077.comp in results/output1
 running test: variant_077.amber
@@ -530,4 +530,4 @@ results/output1/html-colored-table2025-04-09.html
 
 
 Execution time (s):
-170.48274278640747
+173.82137036323547
