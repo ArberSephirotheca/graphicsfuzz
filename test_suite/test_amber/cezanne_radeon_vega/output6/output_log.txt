@@ -1,5 +1,5 @@
 Date and Time:
-07/04/2025 22:35:43
+09/04/2025 00:42:15
 Computer:
 waterthrush
 
@@ -43,7 +43,7 @@ P
 generating amber test for: variant_077.comp in results/output6
 running test: variant_077.amber
 timeout -k 1 15 amber variant_077.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_072.comp in results/output6
 running test: variant_072.amber
@@ -78,7 +78,7 @@ P
 generating amber test for: variant_065.comp in results/output6
 running test: variant_065.amber
 timeout -k 1 15 amber variant_065.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_066.comp in results/output6
 running test: variant_066.amber
@@ -88,12 +88,12 @@ P
 generating amber test for: variant_056.comp in results/output6
 running test: variant_056.amber
 timeout -k 1 15 amber variant_056.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_053.comp in results/output6
 running test: variant_053.amber
 timeout -k 1 15 amber variant_053.amber -d -t spv1.5 >> temp_results.txt
-F
+P
 
 generating amber test for: variant_014.comp in results/output6
 running test: variant_014.amber
@@ -238,7 +238,7 @@ P
 generating amber test for: variant_032.comp in results/output6
 running test: variant_032.amber
 timeout -k 1 15 amber variant_032.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_074.comp in results/output6
 running test: variant_074.amber
@@ -308,7 +308,7 @@ P
 generating amber test for: variant_020.comp in results/output6
 running test: variant_020.amber
 timeout -k 1 15 amber variant_020.amber -d -t spv1.5 >> temp_results.txt
-F
+P
 
 generating amber test for: variant_042.comp in results/output6
 running test: variant_042.amber
@@ -368,7 +368,7 @@ P
 generating amber test for: variant_079.comp in results/output6
 running test: variant_079.amber
 timeout -k 1 15 amber variant_079.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_011.comp in results/output6
 running test: variant_011.amber
@@ -388,7 +388,7 @@ P
 generating amber test for: variant_096.comp in results/output6
 running test: variant_096.amber
 timeout -k 1 15 amber variant_096.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_004.comp in results/output6
 running test: variant_004.amber
@@ -408,7 +408,7 @@ P
 generating amber test for: variant_067.comp in results/output6
 running test: variant_067.amber
 timeout -k 1 15 amber variant_067.amber -d -t spv1.5 >> temp_results.txt
-F
+P
 
 generating amber test for: variant_063.comp in results/output6
 running test: variant_063.amber
@@ -468,7 +468,7 @@ P
 generating amber test for: variant_088.comp in results/output6
 running test: variant_088.amber
 timeout -k 1 15 amber variant_088.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_078.comp in results/output6
 running test: variant_078.amber
@@ -503,7 +503,7 @@ P
 generating amber test for: variant_098.comp in results/output6
 running test: variant_098.amber
 timeout -k 1 15 amber variant_098.amber -d -t spv1.5 >> temp_results.txt
-F
+P
 
 generating amber test for: variant_054.comp in results/output6
 running test: variant_054.amber
@@ -514,20 +514,20 @@ P
 Finished running tests!
 
 writing simple ascii table to:
-results/output6/simple_final_results-2025-04-07.txt
+results/output6/simple_final_results-2025-04-09.txt
 
 writing iteration-based ascii table to:
-results/output6/iteration_based_final_results-2025-04-07.txt
+results/output6/iteration_based_final_results-2025-04-09.txt
 
 writing simple csv table to:
-results/output6/simple_final_results-2025-04-07.csv
+results/output6/simple_final_results-2025-04-09.csv
 
 writing simple csv table to:
-results/output6/simple_final_results-2025-04-07.csv
+results/output6/simple_final_results-2025-04-09.csv
 
 writing colored html table to:
-results/output6/html-colored-table2025-04-07.html
+results/output6/html-colored-table2025-04-09.html
 
 
 Execution time (s):
-225.95139837265015
+236.0910120010376

@@ -37,25 +37,233 @@ layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
  uint subgroup_id = gl_SubgroupID;
- if(_GLF_DEAD(false))
-  barrier();
  uint subgroup_size = gl_SubgroupSize;
- uint gid = gl_GlobalInvocationID.x;
  uint subgroup_local_id = gl_SubgroupInvocationID;
  uint num_workgroup = gl_NumWorkGroups.x;
  uint workgroup_size = gl_WorkGroupSize.x;
- if(_GLF_DEAD(false))
-  return;
- uint total_threads = num_workgroup * workgroup_size;
+ uint workgroup_id = gl_WorkGroupID.x;
+ uint workgroup_base = workgroup_size * workgroup_id;
+ uint virtual_gid = workgroup_base + subgroup_id * subgroup_size + subgroup_local_id;
+ uint next_virtual_gid = workgroup_base + subgroup_id * subgroup_size + ((subgroup_local_id + 1) % subgroup_size);
+ buf[virtual_gid] = 1;
  if(subgroup_local_id + 1 < subgroup_size)
   {
-   atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 4);
-   subgroupAll(false);
+   switch(_GLF_SWITCH(int(_GLF_ZERO(0.0, injectionSwitch.x))))
+    {
+     case 42:
+     bvec4 _GLF_SWITCH_0_0v;
+     case 0:
+     case 55:
+     case 80:
+     case 50:
+     case 53:
+     case 45:
+     case 48:
+     case 63:
+     case 72:
+     switch(_GLF_SWITCH(0))
+      {
+       case 0:
+       atomicStore(buf[next_virtual_gid], uint(2), 4, 64, 4);
+       case 19:
+       case 95:
+       subgroupAll(false);
+       break;
+       default:
+       1;
+      }
+     break;
+     default:
+     1;
+    }
   }
  else
   {
-   atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 4);
-   subgroupAll(true);
+   switch(_GLF_SWITCH(int(_GLF_ZERO(0.0, injectionSwitch.x))))
+    {
+     case 35:
+     (virtual_gid % uvec2(103489u, 190840u));
+     case 0:
+     case 13:
+     case 97:
+     case 60:
+     case 41:
+     case 61:
+     case 15:
+     case 48:
+     case 78:
+     case 98:
+     switch(_GLF_SWITCH(0))
+      {
+       case 72:
+       while((-76626 < 11385))
+        {
+         {
+          ;
+          uvec2(170687u, 46517u);
+         }
+         mat3(-0.9, -2.6, 135.555, -8643.1576, 5.6, 186.231, -5.6, -6875.9143, -1.4);
+         {
+          vec4(-32.39, 3.1, -368.700, -7107.4417);
+          while(false)
+           {
+           }
+          for(          -4041.5999;
+ (true == true); (bvec3(true, true, true) != bvec3(true, true, false)))
+           {
+            -82471;
+            (-78105 * ivec2(17563, 9107).y);
+            ;
+            ;
+            ivec3(-13858, 83324, -42703);
+            bvec4 _GLF_SWITCH_2_0v, _GLF_SWITCH_2_1v, _GLF_SWITCH_2_2v;
+           }
+          ivec4 _GLF_SWITCH_2_3v, _GLF_SWITCH_2_4v[54], _GLF_SWITCH_2_5v[22];
+          for(float _GLF_SWITCH_2_6v, _GLF_SWITCH_2_7v; (_GLF_SWITCH_2_3v.ps == ivec2(-35173, 59387)); uvec4(166293u, 148306u, 90135u, 22549u))
+           {
+            _GLF_SWITCH_2_7v;
+            true;
+            injectionSwitch;
+            vec2 _GLF_SWITCH_2_8v, _GLF_SWITCH_2_9v[57];
+           }
+         }
+         (false ? mat2x3(-18.61, 12.77, 1.8, 86.63, -690.360, -111.297) : mat2x3(49.73, 67.22, -6738.5527, 4.5, 4211.3000, -6.4));
+         bvec3 _GLF_SWITCH_2_10v, _GLF_SWITCH_2_11v, _GLF_SWITCH_2_12v;
+         bvec4 _GLF_SWITCH_2_13v, _GLF_SWITCH_2_14v[90];
+         for(         mat4(-9.8, -86.73, 293.360, -7.0, 4.2, -235.916, 377.582, -72.82, -1068.4886, -483.213, -98.46, 7.1, 75.64, -3335.8685, 2442.1373, 50.92);
+ true; next_virtual_gid)
+          {
+           switch(_GLF_SWITCH(int(_GLF_ZERO(0.0, injectionSwitch.x))))
+            {
+             case 68:
+             bvec3(false, false, false);
+             case 0:
+             case 20:
+             bool _GLF_SWITCH_2_15v, _GLF_SWITCH_2_16v;
+             case 52:
+             ivec4(24532, -9059, 12653, -8471);
+             case 44:
+             case 40:
+             {
+              mat3(mat2(9.2, -5148.4496, 8.2, -8.2));
+              ;
+              ivec2 _GLF_SWITCH_2_17v[57];
+              ivec2(76530, 46146);
+              _GLF_SWITCH_2_16v;
+             }
+             break;
+             case 88:
+             ;
+             case 70:
+             mat3 _GLF_SWITCH_4_0v[4], _GLF_SWITCH_4_1v;
+             default:
+             1;
+            }
+          }
+         bvec3 _GLF_SWITCH_2_18v;
+         while(true)
+          {
+           switch(_GLF_SWITCH(0))
+            {
+             case 27:
+             ivec2 _GLF_SWITCH_3_0v[11];
+             case 0:
+             if(false)
+              {
+               ;
+               mat4 _GLF_SWITCH_2_19v;
+               uint(-15195);
+               max(exp(-8936.1796), sinh(5.9));
+              }
+             else
+              {
+               ivec3(-23565, -22206, -61354);
+               ;
+               mat4x2 _GLF_SWITCH_2_20v;
+               ;
+               ;
+              }
+             case 85:
+             case 16:
+             case 18:
+             case 84:
+             case 91:
+             {
+              clamp(ivec4(-1077, -53830, -14522, 65962), findMSB(packHalf2x16(vec2(-0.2, 14.15))), -11287);
+              mat3x2 _GLF_SWITCH_2_21v, _GLF_SWITCH_2_22v;
+              ivec2(-1423, -10372);
+              mat3x4(-36.72, 99.61, 5386.8606, 4960.3486, -24.46, -6.3, 145.114, 0.1, -26.69, 6.4, -36.74, 3.0);
+              mat2 _GLF_SWITCH_2_23v;
+              mat4x2 _GLF_SWITCH_2_24v, _GLF_SWITCH_2_25v;
+              mat2x4 _GLF_SWITCH_2_26v, _GLF_SWITCH_2_27v, _GLF_SWITCH_2_28v;
+              mat2 _GLF_SWITCH_2_29v[48], _GLF_SWITCH_2_30v, _GLF_SWITCH_2_31v;
+              ;
+             }
+             case 79:
+             for(bvec3 _GLF_SWITCH_2_32v, _GLF_SWITCH_2_33v, _GLF_SWITCH_2_34v[28]; true; uvec2(111964u, 11718u))
+              {
+               ((ivec2(7116, -42061) / ivec2(-27949, 99429)) | ivec2(-46345, 11940)).t;
+               uvec2(156116u, 188942u);
+               false;
+               uvec4 _GLF_SWITCH_2_35v, _GLF_SWITCH_2_36v;
+               ;
+               (next_virtual_gid & workgroup_id);
+              }
+             min(ivec4(-87139, -86731, 21436, 92015), 35475);
+             case 1:
+             case 80:
+             ivec4 _GLF_SWITCH_2_37v, _GLF_SWITCH_2_38v, _GLF_SWITCH_2_39v;
+             break;
+             case 82:
+             bvec2 _GLF_SWITCH_3_1v, _GLF_SWITCH_3_2v[49];
+             default:
+             1;
+            }
+          }
+        }
+       case 0:
+       case 94:
+       case 18:
+       case 80:
+       case 24:
+       case 90:
+       case 49:
+       switch(_GLF_SWITCH(0))
+        {
+         case 87:
+         while(true)
+          {
+           ivec2 _GLF_SWITCH_1_0v, _GLF_SWITCH_1_1v, _GLF_SWITCH_1_2v;
+           float _GLF_SWITCH_1_3v, _GLF_SWITCH_1_4v, _GLF_SWITCH_1_5v;
+           bvec3(true, bvec2(false, false));
+           ceil(pow(injectionSwitch, (vec2(-77.30, -1627.4415) - 188.726)));
+          }
+         case 0:
+         case 67:
+         case 4:
+         case 93:
+         case 66:
+         atomicStore(buf[next_virtual_gid], uint(2), 4, 64, 4);
+         case 47:
+         case 17:
+         case 6:
+         case 81:
+         case 77:
+         subgroupAll(true);
+         break;
+         default:
+         1;
+        }
+       break;
+       case 92:
+       mat3 _GLF_SWITCH_2_40v[7], _GLF_SWITCH_2_41v, _GLF_SWITCH_2_42v;
+       default:
+       1;
+      }
+     break;
+     default:
+     1;
+    }
   }
 }
 

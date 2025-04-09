@@ -22,7 +22,61 @@ SHADER compute test GLSL
 #endif
 
 
-layout(set = 0, binding = 1) uniform buf1 {
+struct _GLF_struct_5 {
+ mat4x3 _f0;
+ mat4x2 _f1;
+ mat3x4 _f2;
+ mat4x2 _f3;
+ uvec4 _f4;
+ ivec3 _f5;
+} ;
+
+struct _GLF_struct_4 {
+ uint workgroup_id;
+ vec2 _f0;
+ vec3 _f1;
+ uint _f2;
+ mat3 _f3;
+ ivec3 _f4;
+} ;
+
+struct _GLF_struct_3 {
+ int _f0;
+ vec3 _f1;
+ uvec3 _f2;
+ bvec2 _f3;
+} ;
+
+struct _GLF_struct_2 {
+ mat2 _f0;
+ mat2 _f1;
+ mat2 _f2;
+} ;
+
+struct _GLF_struct_1 {
+ ivec3 _f0;
+ mat4x3 _f1;
+} ;
+
+struct _GLF_struct_0 {
+ ivec4 _f0;
+} ;
+
+struct _GLF_struct_6 {
+ uvec4 _f0;
+ _GLF_struct_0 _f1;
+ _GLF_struct_1 _f2;
+ _GLF_struct_2 _f3;
+ _GLF_struct_3 _f4;
+ _GLF_struct_4 _f5;
+ _GLF_struct_5 _f6;
+} ;
+
+struct _GLF_struct_7 {
+ _GLF_struct_6 _f0;
+} ;
+
+layout(set = 0, binding = 0) uniform buf0 {
  vec2 injectionSwitch;
 };
 #extension GL_KHR_shader_subgroup_basic : enable
@@ -37,23 +91,17 @@ layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
  if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
   {
+   if(_GLF_DEAD(false))
+    barrier();
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(false))
       barrier();
+     if(_GLF_DEAD(false))
+      barrier();
      barrier();
     }
-   barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-  }
- if(_GLF_DEAD(false))
-  {
    if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
@@ -63,39 +111,46 @@ void main()
     barrier();
   }
  if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ uvec2 GLF_merged2_0_1_17_1_1_14subgroup_local_idworkgroup_base;
+ if(_GLF_DEAD(false))
   {
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(false))
       barrier();
      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
     }
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(false, true && (_GLF_IDENTITY(false, ! (! (false)))))))
-      barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
    if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(false))
@@ -104,161 +159,16 @@ void main()
       barrier();
      barrier();
     }
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
    if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
     barrier();
-   if(_GLF_DEAD(false))
-    barrier();
    barrier();
   }
- uint subgroup_id = gl_SubgroupID;
  if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
   {
-   if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
-    {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(_GLF_IDENTITY(false, bool(bvec2(false, true))), true && (_GLF_IDENTITY(_GLF_IDENTITY(false, bool(bvec2(false, true))), (_GLF_IDENTITY(false, bool(bvec2(false, true)))) && true)))))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(_GLF_IDENTITY(false, _GLF_IDENTITY(bool(bvec3(_GLF_IDENTITY(false, false || (false)), true, true)), ! (! (bool(bvec3(_GLF_IDENTITY(false, false || (false)), true, true))))))))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
    if(_GLF_DEAD(false))
     barrier();
    barrier();
@@ -266,89 +176,112 @@ void main()
  if(_GLF_DEAD(false))
   {
    if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
    barrier();
   }
  if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+  }
+ if(_GLF_DEAD(false))
   barrier();
  if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_IDENTITY(false, ! (_GLF_IDENTITY(! (false), false || (! (false)))))))
   {
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
    barrier();
   }
  if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
   {
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(false))
-      barrier();
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
     }
+   barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
    if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+          barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+      }
      if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(false))
@@ -357,34 +290,151 @@ void main()
       }
      if(_GLF_DEAD(false))
       barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
       barrier();
      if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(false))
         barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, ! (_GLF_IDENTITY(! (false), ! (! (! (false))))))))
+        barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec3(false, false, _GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)))))))
+        barrier();
+       barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
        if(_GLF_DEAD(false))
         {
          if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
           barrier();
          barrier();
         }
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       barrier();
+      }
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
         barrier();
        barrier();
        if(_GLF_DEAD(false))
         barrier();
       }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
     }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(false))
@@ -393,36 +443,231 @@ void main()
     }
    if(_GLF_DEAD(false))
     barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
    if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
       barrier();
      if(_GLF_DEAD(false))
       barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+      }
      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
     }
    barrier();
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
    if(_GLF_DEAD(false))
     {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+    {
      if(_GLF_DEAD(false))
       barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     barrier();
     }
    if(_GLF_DEAD(false))
     barrier();
   }
  if(_GLF_DEAD(false))
   barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+      barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ uint subgroup_id = gl_SubgroupID;
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+      }
+     barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+    barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))) || false)))
+    barrier();
+  }
  if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
   barrier();
  if(_GLF_DEAD(false))
@@ -431,6 +676,10 @@ void main()
     barrier();
    barrier();
   }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
  uint subgroup_size = gl_SubgroupSize;
  if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
   {
@@ -442,403 +691,115 @@ void main()
   barrier();
  if(_GLF_DEAD(false))
   barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), bool(bvec4(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), false, false, false)))))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
  if(_GLF_DEAD(false))
   {
    if(_GLF_DEAD(false))
     barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- uint gid = gl_GlobalInvocationID.x;
- if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     barrier();
+    }
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
         {
-         if(_GLF_DEAD(false))
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
           barrier();
          barrier();
         }
        barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
        if(_GLF_DEAD(false))
         barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
       }
      barrier();
     }
-   if(_GLF_DEAD(_GLF_IDENTITY(false, _GLF_IDENTITY(bool(bvec2(false, true)), (bool(bvec2(false, true))) || false))))
-    {
-     if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
-    }
-   barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
-    barrier();
    barrier();
   }
- if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
  if(_GLF_DEAD(false))
   {
    if(_GLF_DEAD(false))
     barrier();
    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
   }
- if(_GLF_DEAD(false))
-  barrier();
  uint subgroup_local_id = gl_SubgroupInvocationID;
  if(_GLF_DEAD(false))
   barrier();
  if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
+  barrier();
  if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
   barrier();
  if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
  if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-  }
- if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
   {
    if(_GLF_DEAD(false))
     barrier();
    barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+    barrier();
   }
- uint num_workgroup = gl_NumWorkGroups.x;
  if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec3(false, false, _GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)))))))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-        }
-       barrier();
-      }
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   barrier();
-   if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), true && (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
   barrier();
  if(_GLF_DEAD(false))
   barrier();
  if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
   barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
  if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
   {
    if(_GLF_DEAD(false))
@@ -846,972 +807,201 @@ void main()
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
-    }
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-        }
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
-          barrier();
-         barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           barrier();
-          }
-        }
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(false))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           barrier();
-          }
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           barrier();
-          }
-         barrier();
-        }
-       if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(_GLF_IDENTITY(false, true && (false)), (_GLF_IDENTITY(false, true && (false))) || false)))
-      {
-       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && _GLF_TRUE(true, (injectionSwitch.x < injectionSwitch.y)))))
-        barrier();
-       barrier();
-      }
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
-        barrier();
-       barrier();
-      }
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(false))
         barrier();
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
        barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
        if(_GLF_DEAD(false))
         barrier();
        if(_GLF_DEAD(false))
         barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-        }
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(_GLF_IDENTITY(false, bool(bvec2(false, false))), bool(bool(_GLF_IDENTITY(false, bool(bvec2(false, false))))))))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-        }
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         if(_GLF_DEAD(false))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           barrier();
-          }
-         if(_GLF_DEAD(false))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           barrier();
-          }
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-            barrier();
-           barrier();
-           if(_GLF_DEAD(false))
-            barrier();
-          }
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-        }
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           barrier();
-          }
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           if(_GLF_DEAD(false))
-            {
-             if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-              barrier();
-             barrier();
-            }
-           barrier();
-           if(_GLF_DEAD(false))
-            barrier();
-          }
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           if(_GLF_DEAD(false))
-            {
-             if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-              barrier();
-             barrier();
-            }
-           barrier();
-           if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec4(false, true, true, _GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)))))))
-            barrier();
-          }
-         barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           barrier();
-           if(_GLF_DEAD(false))
-            barrier();
-          }
-        }
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-        }
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
-        barrier();
-       barrier();
-      }
-     barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-      }
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          {
-           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-            barrier();
-           if(_GLF_DEAD(false))
-            barrier();
-           barrier();
-          }
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           barrier();
-          }
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- uint workgroup_size = gl_WorkGroupSize.x;
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (_GLF_IDENTITY(false, true && (false)))))))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_IDENTITY(false, _GLF_IDENTITY(bool(bvec4(false, false, false, false)), bool(bool(bool(bvec4(false, false, false, false))))))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), (_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))) || false)) && true)))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
       }
      if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec4(false, false, true, true)))))
-        barrier();
-      }
-     if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          {
-           if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-            barrier();
-           barrier();
-          }
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
          barrier();
         }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-        barrier();
        if(_GLF_DEAD(false))
         {
          if(_GLF_DEAD(false))
           barrier();
          barrier();
         }
+       if(_GLF_DEAD(false))
+        barrier();
        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), ! (! (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)))))))
-        barrier();
        if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           if(_GLF_DEAD(false))
-            barrier();
-           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-            barrier();
-           barrier();
-           if(_GLF_DEAD(false))
-            barrier();
-           if(_GLF_DEAD(false))
-            barrier();
-          }
-         barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-        }
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
       }
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), (_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), true && (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))) || false)))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       barrier();
+      }
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), ! (! (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)))))))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
      if(_GLF_DEAD(false))
       barrier();
      if(_GLF_DEAD(false))
@@ -1820,71 +1010,36 @@ void main()
       barrier();
      if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
       barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
-        barrier();
-       barrier();
-      }
      barrier();
+    }
+   if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
+    {
      if(_GLF_DEAD(false))
       barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec3(false, false, false)))))
+    {
      if(_GLF_DEAD(false))
       barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
      if(_GLF_DEAD(false))
       {
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
+       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
         barrier();
        barrier();
       }
      if(_GLF_DEAD(false))
       barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
      if(_GLF_DEAD(false))
       {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
        if(_GLF_DEAD(false))
         barrier();
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
@@ -1892,122 +1047,78 @@ void main()
          if(_GLF_DEAD(false))
           barrier();
          barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
         }
        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
       }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
      if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
      if(_GLF_DEAD(false))
       barrier();
      if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(false))
         barrier();
-       if(_GLF_DEAD(false))
-        barrier();
        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
       }
      if(_GLF_DEAD(false))
       {
+       if(_GLF_DEAD(false))
+        barrier();
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
         {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
           barrier();
          barrier();
         }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
+          {
+           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+            barrier();
+           barrier();
+          }
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+        }
       }
      if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-     if(_GLF_DEAD(false))
       {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+       if(_GLF_DEAD(false))
         {
          if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
           barrier();
@@ -2015,70 +1126,52 @@ void main()
         }
        if(_GLF_DEAD(false))
         barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec4(false, true, true, false)))))
+        barrier();
        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
       }
      if(_GLF_DEAD(false))
       barrier();
-    }
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), bool(bool(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)))))))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
      if(_GLF_DEAD(false))
       barrier();
      barrier();
      if(_GLF_DEAD(false))
       barrier();
     }
-   if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   barrier();
-   if(_GLF_DEAD(false))
-    barrier();
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
      if(_GLF_DEAD(false))
       {
+       if(_GLF_DEAD(false))
+        barrier();
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
        barrier();
@@ -2087,6 +1180,237 @@ void main()
     }
    if(_GLF_DEAD(false))
     {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, bool(_GLF_IDENTITY(bvec2(false, false), bvec2(bvec4(bvec2(false, false), false, false)))))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), ! (! (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)))))))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           if(_GLF_DEAD(false))
+            {
+             if(_GLF_DEAD(false))
+              barrier();
+             barrier();
+            }
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
+          {
+           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+            barrier();
+           barrier();
+          }
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
      if(_GLF_DEAD(false))
       barrier();
      if(_GLF_DEAD(false))
@@ -2095,102 +1419,233 @@ void main()
         barrier();
        barrier();
       }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
      barrier();
      if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         if(_GLF_DEAD(_GLF_IDENTITY(false, ! (_GLF_IDENTITY(! (false), true && (! (false)))))))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+        }
+       barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
     }
   }
- if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bool(false)))))
   barrier();
  if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ GLF_merged2_0_1_17_1_1_14subgroup_local_idworkgroup_base.x = subgroup_local_id;
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
   barrier();
  if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
   barrier();
  if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
   {
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(false))
     barrier();
    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
-     barrier();
-    }
-  }
- uint total_threads = num_workgroup * workgroup_size;
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- buf[gid] = 1;
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec3(false, true, true)))))
-    {
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
      barrier();
     }
    if(_GLF_DEAD(false))
     barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || _GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(false))
       barrier();
-     barrier();
-    }
-   barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(_GLF_IDENTITY(false, (_GLF_IDENTITY(false, (false) || false)) || false)))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
      if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          {
+           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+            barrier();
+           barrier();
+          }
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       {
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
@@ -2198,9 +1653,311 @@ void main()
       }
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
-     barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(false, _GLF_IDENTITY(bool(bvec2(false, true)), bool(bvec4(bool(bvec2(false, true)), false, false, true))))))
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
       barrier();
+     barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ uint num_workgroup = gl_NumWorkGroups.x;
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec2(false, true)))))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_IDENTITY(false, (_GLF_IDENTITY(false, bool(bvec4(false, false, true, true)))) || false)))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec2(false, true)))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), _GLF_TRUE(true, (injectionSwitch.x < injectionSwitch.y)) && (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     barrier();
+    }
+   barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, bool(_GLF_IDENTITY(bvec2(_GLF_IDENTITY(false, (false) || false), false), bvec2(bvec3(bvec2(_GLF_IDENTITY(false, (false) || false), false), false)))))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec4(false, true, false, true)))))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
      if(_GLF_DEAD(false))
       barrier();
      if(_GLF_DEAD(false))
@@ -2209,10 +1966,15 @@ void main()
         barrier();
        barrier();
       }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+     if(_GLF_DEAD(false))
       barrier();
+     barrier();
     }
    if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
    if(_GLF_DEAD(false))
     barrier();
@@ -2220,21 +1982,320 @@ void main()
     {
      if(_GLF_DEAD(false))
       {
-       if(_GLF_DEAD(false))
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(_GLF_IDENTITY(false, false || (false)), bool(bvec3(_GLF_IDENTITY(false, false || (false)), true, _GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)))))))
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
          if(_GLF_DEAD(false))
           barrier();
          barrier();
         }
        barrier();
       }
-     if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec4(false, true, false, true)))))
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), true && (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec4(false, true, true, false)))))
+        barrier();
+      }
+     if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_IDENTITY(false, _GLF_IDENTITY(bool(bvec3(false, true, true)), bool(bvec3(bool(bvec3(false, true, true)), true, false))))))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, false || (_GLF_IDENTITY(false, true && (false))))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bool(false)))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_IDENTITY(false, ! (_GLF_IDENTITY(! (false), ! (! (! (false))))))))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, true && (_GLF_IDENTITY(false, false || (false))))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ uint workgroup_size = gl_WorkGroupSize.x;
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bool(_GLF_IDENTITY(false, false || (false)))))))
       {
        if(_GLF_DEAD(false))
         barrier();
@@ -2244,22 +2305,770 @@ void main()
       barrier();
      barrier();
     }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
    if(_GLF_DEAD(false))
     barrier();
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+      }
+     if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec3(false, true, false)))))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bool(false)))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+  }
+ _GLF_struct_7 _GLF_struct_replacement_7 = _GLF_struct_7(_GLF_struct_6(uvec4(1u), _GLF_struct_0(ivec4(1)), _GLF_struct_1(ivec3(1), mat4x3(1.0)), _GLF_struct_2(mat2(1.0), mat2(1.0), mat2(1.0)), _GLF_struct_3(1, vec3(1.0), uvec3(1u), bvec2(true)), _GLF_struct_4(gl_WorkGroupID.x, vec2(1.0), vec3(1.0), 1u, mat3(1.0), ivec3(1)), _GLF_struct_5(mat4x3(1.0), mat4x2(1.0), mat3x4(1.0), mat4x2(1.0), uvec4(1u), ivec3(1))));
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
      if(_GLF_DEAD(false))
       barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec3(_GLF_IDENTITY(false, (false) && true), false, true)))))
+            barrier();
+           if(_GLF_DEAD(false))
+            {
+             if(_GLF_DEAD(false))
+              barrier();
+             if(_GLF_DEAD(false))
+              barrier();
+             barrier();
+            }
+           barrier();
+           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+            barrier();
+          }
+         barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          {
+           if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+            {
+             if(_GLF_DEAD(_GLF_IDENTITY(false, _GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)) || (false))))
+              barrier();
+             barrier();
+            }
+           barrier();
+          }
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         barrier();
+        }
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(_GLF_IDENTITY(false, true && (false)), ! (! (_GLF_IDENTITY(false, true && (false)))))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+        }
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+            barrier();
+           barrier();
+          }
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+            barrier();
+           if(_GLF_DEAD(false))
+            barrier();
+          }
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, ! (_GLF_IDENTITY(! (false), false || (! (false)))))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec2(false, false)))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         barrier();
+        }
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+        barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), true && (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ uint workgroup_base = workgroup_size * _GLF_struct_replacement_7._f0._f5.workgroup_id;
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_IDENTITY(false, true && (_GLF_IDENTITY(false, ! (! (false)))))))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+        }
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
         barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
        barrier();
       }
-     if(_GLF_DEAD(false))
-      barrier();
      barrier();
     }
    if(_GLF_DEAD(false))
@@ -2268,90 +3077,6 @@ void main()
       barrier();
      barrier();
     }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(false, (_GLF_IDENTITY(false, ! (! (false)))) || false)))
-      barrier();
-     barrier();
-    }
-   barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_IDENTITY(false, (_GLF_IDENTITY(false, bool(bool(false)))) && true)))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  {
    if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
@@ -2359,18 +3084,10 @@ void main()
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(false))
         barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
        barrier();
       }
@@ -2378,14 +3095,93 @@ void main()
     }
    barrier();
   }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))) || false)))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
  if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec3(false, _GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), false)))))
+      barrier();
+    }
+   barrier();
+  }
+ if(_GLF_DEAD(false))
   barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  barrier();
+ GLF_merged2_0_1_17_1_1_14subgroup_local_idworkgroup_base.y = workgroup_base;
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_IDENTITY(false, _GLF_IDENTITY(bool(bvec2(false, true)), ! (! (bool(bvec2(false, true))))))))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+  }
  if(_GLF_DEAD(false))
   {
    if(_GLF_DEAD(false))
@@ -2393,46 +3189,635 @@ void main()
    barrier();
   }
  if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ uint virtual_gid = GLF_merged2_0_1_17_1_1_14subgroup_local_idworkgroup_base.y + subgroup_id * subgroup_size + GLF_merged2_0_1_17_1_1_14subgroup_local_idworkgroup_base.x;
+ if(_GLF_DEAD(false))
   barrier();
- if(subgroup_local_id + 1 < subgroup_size)
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(false))
   {
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bool(false)))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           if(_GLF_DEAD(_GLF_IDENTITY(false, bool(_GLF_IDENTITY(bvec2(false, true), bvec2(bvec2(bvec2(false, true))))))))
+            {
+             if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+              barrier();
+             barrier();
+            }
+           barrier();
+          }
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+            barrier();
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+        {
+         if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
+          barrier();
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+  }
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ uint next_virtual_gid = GLF_merged2_0_1_17_1_1_14subgroup_local_idworkgroup_base.y + subgroup_id * subgroup_size + ((GLF_merged2_0_1_17_1_1_14subgroup_local_idworkgroup_base.x + 1) % subgroup_size);
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
    if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+  }
+ buf[virtual_gid] = 1;
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), true && (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
       barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec3(false, true, false)))))
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(false))
         barrier();
        barrier();
       }
      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    {
      if(_GLF_DEAD(false))
       barrier();
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec2(false, false)))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+    }
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(GLF_merged2_0_1_17_1_1_14subgroup_local_idworkgroup_base.x + 1 < subgroup_size)
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
      if(_GLF_DEAD(false))
       barrier();
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       {
-       if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+       if(_GLF_DEAD(false))
         barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
         barrier();
        barrier();
+      }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
         barrier();
       }
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+           if(_GLF_DEAD(false))
+            barrier();
+          }
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, true && (_GLF_IDENTITY(false, false || (false))))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           if(_GLF_DEAD(false))
+            {
+             if(_GLF_DEAD(false))
+              {
+               if(_GLF_DEAD(false))
+                barrier();
+               barrier();
+              }
+             barrier();
+            }
+           barrier();
+          }
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+            barrier();
+           if(_GLF_DEAD(false))
+            {
+             if(_GLF_DEAD(false))
+              barrier();
+             if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+              barrier();
+             barrier();
+            }
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+           if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec2(false, false)))))
+            barrier();
+          }
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(_GLF_IDENTITY(false, ! (_GLF_IDENTITY(! (false), (! (false)) || false)))))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+            barrier();
+           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+            barrier();
+           if(_GLF_DEAD(false))
+            {
+             if(_GLF_DEAD(false))
+              barrier();
+             if(_GLF_DEAD(false))
+              barrier();
+             barrier();
+             if(_GLF_DEAD(false))
+              barrier();
+            }
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
        if(_GLF_DEAD(false))
         barrier();
        if(_GLF_DEAD(false))
@@ -2443,44 +3828,194 @@ void main()
         }
        if(_GLF_DEAD(false))
         barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
         {
          if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
           barrier();
          barrier();
         }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
       }
-     if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), (_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), bool(bvec2(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), false)))) && true)))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
     }
-   if(_GLF_DEAD(false))
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
+   int i = 0;
    if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(false))
       barrier();
      barrier();
     }
-   int i = 0;
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          {
+           if(_GLF_DEAD(false))
+            barrier();
+           barrier();
+          }
+         barrier();
+        }
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec4(_GLF_IDENTITY(false, (false) || false), false, true, false)))))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+         if(_GLF_DEAD(false))
+          barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec4(false, false, true, true)))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), bool(bvec2(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))) && true), false)))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
+    barrier();
    if(_GLF_DEAD(false))
     {
+     if(_GLF_DEAD(false))
+      barrier();
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
@@ -2488,27 +4023,53 @@ void main()
      if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
+        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), bool(bool(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))) && true))))))
+          {
+           if(_GLF_DEAD(_GLF_IDENTITY(false, true && (_GLF_IDENTITY(false, (false) || false)))))
+            barrier();
+           barrier();
+          }
+         barrier();
+        }
+       barrier();
+       if(_GLF_DEAD(false))
         barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
        barrier();
       }
-     if(_GLF_DEAD(false))
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
     }
-   if(_GLF_DEAD(_GLF_IDENTITY(_GLF_IDENTITY(false, bool(bvec2(false, true))), (_GLF_IDENTITY(false, bool(bvec2(false, true)))) || _GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)))))
+   atomicStore(buf[next_virtual_gid], uint(2), 4, 64, 4);
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
     barrier();
-   atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 4);
    if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+   if(_GLF_DEAD(false))
     barrier();
   }
  else
@@ -2517,256 +4078,13 @@ void main()
     {
      if(_GLF_DEAD(false))
       barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       barrier();
-      }
-     barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
      if(_GLF_DEAD(false))
       barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-        }
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-    }
-   atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 4);
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_IDENTITY(false, _GLF_TRUE(true, (injectionSwitch.x < injectionSwitch.y)) && (false))))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
      barrier();
      if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-         if(_GLF_DEAD(_GLF_IDENTITY(false, bool(_GLF_IDENTITY(bvec2(false, false), bvec2(bvec3(bvec2(false, false), false)))))))
-          barrier();
-        }
-       if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (_GLF_IDENTITY(false, bool(bvec2(false, false))))))))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     if(_GLF_DEAD(_GLF_IDENTITY(false, _GLF_IDENTITY(bool(bvec4(_GLF_IDENTITY(false, ! (! (false))), false, false, false)), bool(bvec2(bool(bvec4(_GLF_IDENTITY(false, ! (! (false))), false, false, false)), false))))))
       barrier();
      if(_GLF_DEAD(false))
       barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
-      barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))) && true)))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
-        }
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       barrier();
-      }
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     barrier();
     }
    if(_GLF_DEAD(false))
     {
@@ -2774,188 +4092,159 @@ void main()
       {
        if(_GLF_DEAD(false))
         barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(false, (_GLF_IDENTITY(false, bool(bvec3(false, false, true)))) && true)))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
        barrier();
       }
      barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-      }
-     barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
     }
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
    if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-    }
+    barrier();
    if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(false))
     {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec3(false, false, false)))))
-      barrier();
      if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
      if(_GLF_DEAD(false))
       {
-       if(_GLF_DEAD(false))
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
        barrier();
       }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+     if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(false))
         barrier();
        if(_GLF_DEAD(false))
         {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), false || (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      {
+       if(_GLF_DEAD(false))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
+         if(_GLF_DEAD(false))
+          barrier();
          if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          {
-           if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-            barrier();
-           barrier();
-          }
-         if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
           barrier();
          if(_GLF_DEAD(false))
           barrier();
          barrier();
-        }
-       if(_GLF_DEAD(false))
-        {
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
          if(_GLF_DEAD(false))
           {
            if(_GLF_DEAD(false))
             barrier();
            barrier();
           }
-         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-          barrier();
-         barrier();
         }
-       if(_GLF_DEAD(_GLF_IDENTITY(false, _GLF_IDENTITY(bool(bool(false)), true && (bool(bool(false)))))))
+       barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
         barrier();
       }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     barrier();
+     if(_GLF_DEAD(false))
+      barrier();
      if(_GLF_DEAD(false))
       barrier();
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   atomicStore(buf[next_virtual_gid], uint(2), 4, 64, 4);
+   if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec2(_GLF_IDENTITY(false, ! (! (false))), true)))))
+    barrier();
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
       {
-       if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))) || false)))
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
        barrier();
       }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
      if(_GLF_DEAD(false))
       barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
      if(_GLF_DEAD(false))
       barrier();
      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
      if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
      if(_GLF_DEAD(false))
       {
        if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
-       if(_GLF_DEAD(_GLF_IDENTITY(false, false || (false))))
-        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(false))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
        if(_GLF_DEAD(false))
         barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+       if(_GLF_DEAD(false))
         {
          if(_GLF_DEAD(false))
           barrier();
@@ -2963,47 +4252,35 @@ void main()
         }
        if(_GLF_DEAD(false))
         barrier();
-       if(_GLF_DEAD(false))
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
         barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      {
        if(_GLF_DEAD(false))
         {
          if(_GLF_DEAD(false))
-          {
-           if(_GLF_DEAD(false))
-            barrier();
-           if(_GLF_DEAD(false))
-            barrier();
-           barrier();
-          }
+          barrier();
+         barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
          if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
           barrier();
+         barrier();
+        }
+       barrier();
+       if(_GLF_DEAD(false))
+        {
          if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
           barrier();
+         barrier();
          if(_GLF_DEAD(false))
           barrier();
+        }
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        {
          if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
           {
            if(_GLF_DEAD(false))
@@ -3011,364 +4288,119 @@ void main()
            barrier();
           }
          barrier();
-         if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
-          barrier();
         }
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        {
-         if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bool(false)))))
-          barrier();
-         barrier();
-        }
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(false, ! (_GLF_IDENTITY(! (false), bool(bool(! (false))))))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        {
-         if(_GLF_DEAD(false))
-          barrier();
-         barrier();
-        }
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
       }
     }
-   if(_GLF_DEAD(false))
-    barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_IDENTITY(false, ! (_GLF_IDENTITY(! (_GLF_IDENTITY(false, bool(bvec3(false, false, true)))), bool(bvec4(! (_GLF_IDENTITY(false, bool(bvec3(false, false, true)))), false, true, false)))))))
-  {
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-    }
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   barrier();
    if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
     {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
      if(_GLF_DEAD(false))
       barrier();
      barrier();
     }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
    if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (_GLF_IDENTITY(false, true && (false)))))))
-    barrier();
-   barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     {
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
      barrier();
-    }
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
      if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
       barrier();
      if(_GLF_DEAD(false))
       barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-      }
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
     }
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   barrier();
-   if(_GLF_DEAD(false))
     {
      if(_GLF_DEAD(false))
       barrier();
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), true && (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))))
-      barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-  }
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(false))
-  barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
+      {
+       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec2(false, true)))))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+      }
      if(_GLF_DEAD(false))
       {
-       if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec4(_GLF_IDENTITY(false, (false) && true), true, true, false)))))
+       if(_GLF_DEAD(false))
         barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+        barrier();
+       barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+       if(_GLF_DEAD(false))
+        barrier();
+      }
+     if(_GLF_DEAD(false))
+      {
        if(_GLF_DEAD(false))
         {
          if(_GLF_DEAD(false))
           barrier();
+         if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+          barrier();
+         if(_GLF_DEAD(false))
+          barrier();
          barrier();
         }
-       if(_GLF_DEAD(false))
-        barrier();
        barrier();
        if(_GLF_DEAD(false))
         barrier();
+       if(_GLF_DEAD(false))
+        barrier();
       }
+     if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       {
        if(_GLF_DEAD(false))
         barrier();
-       barrier();
        if(_GLF_DEAD(false))
         barrier();
+       barrier();
+       if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
+        barrier();
       }
+     if(_GLF_DEAD(false))
+      barrier();
      if(_GLF_DEAD(false))
       barrier();
      if(_GLF_DEAD(false))
@@ -3377,125 +4409,68 @@ void main()
         barrier();
        barrier();
       }
+     if(_GLF_DEAD(false))
+      {
+       if(_GLF_DEAD(false))
+        barrier();
+       barrier();
+      }
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
      barrier();
     }
-   if(_GLF_DEAD(false))
-    barrier();
    if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
     barrier();
    if(_GLF_DEAD(false))
     barrier();
    if(_GLF_DEAD(false))
     {
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-    }
-   if(_GLF_DEAD(_GLF_IDENTITY(false, bool(bvec4(false, true, false, true)))))
-    {
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      {
-       if(_GLF_DEAD(_GLF_IDENTITY(false, (false) && true)))
-        barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), ! (! (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)))))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-        barrier();
-       barrier();
-       if(_GLF_DEAD(false))
-        barrier();
-      }
-    }
-   barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    {
-     if(_GLF_DEAD(_GLF_IDENTITY(false, ! (! (false)))))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      barrier();
-     if(_GLF_DEAD(false))
-      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
      if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
       barrier();
      barrier();
-     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-      {
-       if(_GLF_DEAD(false))
-        barrier();
-       barrier();
-      }
-     if(_GLF_DEAD(false))
-      barrier();
     }
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   if(_GLF_DEAD(false))
-    barrier();
    if(_GLF_DEAD(false))
     barrier();
   }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
- if(_GLF_DEAD(_GLF_IDENTITY(false, true && (false))))
-  {
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  {
-   if(_GLF_DEAD(false))
-    {
-     if(_GLF_DEAD(false))
-      barrier();
-     barrier();
-    }
-   barrier();
-  }
- if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+ if(_GLF_DEAD(false))
   barrier();
  if(_GLF_DEAD(false))
   barrier();
  if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  barrier();
+ if(_GLF_DEAD(false))
+  {
+   if(_GLF_DEAD(false))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
+  barrier();
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  {
+   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+    {
+     if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+      barrier();
+     if(_GLF_DEAD(false))
+      barrier();
+     barrier();
+    }
+   if(_GLF_DEAD(false))
+    barrier();
+   barrier();
+  }
+ if(_GLF_DEAD(false))
   barrier();
  if(_GLF_DEAD(_GLF_IDENTITY(false, (false) || false)))
   barrier();
@@ -3503,26 +4478,6 @@ void main()
   barrier();
  if(_GLF_DEAD(false))
   barrier();
- if(_GLF_DEAD(false))
-  {
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   barrier();
-   if(_GLF_DEAD(_GLF_IDENTITY(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y)), (_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))) || false)))
-    barrier();
-   if(_GLF_DEAD(false))
-    barrier();
-   if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-    barrier();
-  }
 }
 
 END
