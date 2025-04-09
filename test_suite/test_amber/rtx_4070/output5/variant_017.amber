@@ -4,7 +4,42 @@ SET ENGINE_DATA fence_timeout_ms 10000
 
 SHADER compute test GLSL
 #version 460
-layout(set = 0, binding = 0) uniform buf0 {
+struct _GLF_struct_2 {
+ uint num_workgroup;
+ float _f0;
+} ;
+
+struct _GLF_struct_1 {
+ uvec3 _f0;
+} ;
+
+struct _GLF_struct_0 {
+ mat3x4 _f0;
+ vec4 _f1;
+ mat2 _f2;
+} ;
+
+struct _GLF_struct_3 {
+ _GLF_struct_0 _f0;
+ _GLF_struct_1 _f1;
+ uvec3 _f2;
+ uvec3 _f3;
+ bvec2 _f4;
+ _GLF_struct_2 _f5;
+ bvec2 _f6;
+} ;
+
+struct _GLF_struct_4 {
+ mat4 _f0;
+ uvec3 _f1;
+ bvec3 _f2;
+ ivec4 _f3;
+ mat2x3 _f4;
+ _GLF_struct_3 _f5;
+ uvec2 _f6;
+} ;
+
+layout(set = 0, binding = 1) uniform buf1 {
  vec2 injectionSwitch;
 };
 #extension GL_KHR_shader_subgroup_basic : enable
@@ -20,12 +55,15 @@ void main()
 {
  uint subgroup_id = gl_SubgroupID;
  uint subgroup_size = gl_SubgroupSize;
- uint gid = gl_GlobalInvocationID.x;
- uint num_workgroup = gl_NumWorkGroups.x;
+ uint subgroup_local_id = gl_SubgroupInvocationID;
+ _GLF_struct_4 _GLF_struct_replacement_4 = _GLF_struct_4(mat4(1.0), uvec3(1u), bvec3(true), ivec4(1), mat2x3(1.0), _GLF_struct_3(_GLF_struct_0(mat3x4(1.0), vec4(1.0), mat2(1.0)), _GLF_struct_1(uvec3(1u)), uvec3(1u), uvec3(1u), bvec2(true), _GLF_struct_2(gl_NumWorkGroups.x, 1.0), bvec2(true)), uvec2(1u));
  uint workgroup_size = gl_WorkGroupSize.x;
- uint total_threads = num_workgroup * workgroup_size;
- buf[gid] = 1;
- atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 4);
+ uint workgroup_id = gl_WorkGroupID.x;
+ uint workgroup_base = workgroup_size * workgroup_id;
+ uint virtual_gid = workgroup_base + subgroup_id * subgroup_size + subgroup_local_id;
+ uint next_virtual_gid = workgroup_base + subgroup_id * subgroup_size + ((subgroup_local_id + 1) % subgroup_size);
+ buf[virtual_gid] = 1;
+ atomicStore(buf[next_virtual_gid], uint(2), 4, 64, 4);
 }
 
 END

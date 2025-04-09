@@ -22,7 +22,7 @@ SHADER compute test GLSL
 #endif
 
 
-layout(set = 0, binding = 1) uniform buf1 {
+layout(set = 0, binding = 0) uniform buf0 {
  vec2 injectionSwitch;
 };
 #extension GL_KHR_shader_subgroup_basic : enable
@@ -38,14 +38,19 @@ void main()
 {
  uint subgroup_id = gl_SubgroupID;
  uint subgroup_size = gl_SubgroupSize;
- uint gid = gl_GlobalInvocationID.x;
- uint num_workgroup = gl_NumWorkGroups.x;
+ uint subgroup_local_id = gl_SubgroupInvocationID;
+ uint num_workgroup = _GLF_IDENTITY(gl_NumWorkGroups, (gl_NumWorkGroups) | (gl_NumWorkGroups)).x;
  uint workgroup_size = gl_WorkGroupSize.x;
+ if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
+  return;
+ uint workgroup_id = gl_WorkGroupID.x;
+ uint workgroup_base = workgroup_size * workgroup_id;
+ uint virtual_gid = workgroup_base + subgroup_id * subgroup_size + subgroup_local_id;
  if(_GLF_DEAD(false))
-  barrier();
- uint total_threads = num_workgroup * workgroup_size;
- buf[gid] = 1;
- atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 0);
+  return;
+ uint next_virtual_gid = workgroup_base + subgroup_id * subgroup_size + ((subgroup_local_id + 1) % _GLF_IDENTITY(subgroup_size, uint(_GLF_IDENTITY(uint(subgroup_size), 0u | (_GLF_IDENTITY(uint(subgroup_size), (true ? uint(subgroup_size) : _GLF_FUZZED(subgroup_id))))))));
+ buf[virtual_gid] = 1;
+ atomicStore(buf[next_virtual_gid], uint(2), 4, 64, 0);
 }
 
 END
