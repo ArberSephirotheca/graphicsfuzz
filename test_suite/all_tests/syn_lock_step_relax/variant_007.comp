@@ -17,7 +17,7 @@
 #endif
 
 
-layout(set = 0, binding = 1) uniform buf1 {
+layout(set = 0, binding = 0) uniform buf0 {
  vec2 injectionSwitch;
 };
 #extension GL_KHR_shader_subgroup_basic : enable
@@ -31,12 +31,21 @@ layout(set = 0, binding = 0) buffer Buf {
 layout(local_size_x = 128, local_size_y = 1, local_size_z = 1) in;
 void main()
 {
+ uvec3 GLF_merged3_0_1_11_1_1_17_2_1_12subgroup_idsubgroup_local_idworkgroup_id;
  uint subgroup_id = gl_SubgroupID;
+ GLF_merged3_0_1_11_1_1_17_2_1_12subgroup_idsubgroup_local_idworkgroup_id.x = subgroup_id;
+ if(_GLF_DEAD(false))
+  return;
  uint subgroup_size = gl_SubgroupSize;
- uint gid = gl_GlobalInvocationID.x;
+ uint subgroup_local_id = gl_SubgroupInvocationID;
+ GLF_merged3_0_1_11_1_1_17_2_1_12subgroup_idsubgroup_local_idworkgroup_id.y = subgroup_local_id;
  uint num_workgroup = gl_NumWorkGroups.x;
  uint workgroup_size = gl_WorkGroupSize.x;
- uint total_threads = num_workgroup * workgroup_size;
- buf[gid] = _GLF_IDENTITY(1, _GLF_IDENTITY(max(1, _GLF_IDENTITY(1, min(_GLF_IDENTITY(1, int(ivec4(1, 0, 0, 1))), _GLF_IDENTITY(1, (1) - 0)))), min(max(1, 1), max(1, 1))));
- atomicStore(buf[(gid + 1) % total_threads], uint(2), 4, 64, 0);
+ uint workgroup_id = gl_WorkGroupID.x;
+ GLF_merged3_0_1_11_1_1_17_2_1_12subgroup_idsubgroup_local_idworkgroup_id.z = workgroup_id;
+ uint workgroup_base = workgroup_size * GLF_merged3_0_1_11_1_1_17_2_1_12subgroup_idsubgroup_local_idworkgroup_id.z;
+ uint virtual_gid = workgroup_base + GLF_merged3_0_1_11_1_1_17_2_1_12subgroup_idsubgroup_local_idworkgroup_id.x * subgroup_size + GLF_merged3_0_1_11_1_1_17_2_1_12subgroup_idsubgroup_local_idworkgroup_id.y;
+ uint next_virtual_gid = workgroup_base + GLF_merged3_0_1_11_1_1_17_2_1_12subgroup_idsubgroup_local_idworkgroup_id.x * subgroup_size + ((GLF_merged3_0_1_11_1_1_17_2_1_12subgroup_idsubgroup_local_idworkgroup_id.y + 1) % subgroup_size);
+ buf[virtual_gid] = 1;
+ atomicStore(buf[next_virtual_gid], uint(2), 4, 64, 0);
 }

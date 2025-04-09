@@ -50,7 +50,7 @@ ENV PATH="/opt/graphicsfuzz/graphicsfuzz/target/graphicsfuzz/python/drivers:${PA
 FROM builder AS generate
 WORKDIR /opt/graphicsfuzz/temp
 COPY test_suite/references /opt/graphicsfuzz/temp/references
-COPY test_suite/donors /opt/graphicsfuzz/temp/donors
+COPY test_suite/fake_donors /opt/graphicsfuzz/temp/donors
 RUN glsl-generate --vulkan ./references ./donors 100 syn /output
 
 FROM scratch AS generate-final

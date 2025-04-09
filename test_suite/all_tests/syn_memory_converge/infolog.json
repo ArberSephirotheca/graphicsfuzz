@@ -1,0 +1,5 @@
+{
+  "git_hash": "3663ccbeaa759f27cd1c2a747929bb321c170423-dirty",
+  "args": "/opt/graphicsfuzz/temp/./references/memory_converge.json ./donors /output/syn_memory_converge --seed 1726145575 --max-uniforms 0 --max-bytes 500000 --push-constant-probability 0.5 --vulkan --num-variants 100",
+  "seed": "RandomWrapper with seed: 1726145575"
+}
