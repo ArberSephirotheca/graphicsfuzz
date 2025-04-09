@@ -1,5 +1,5 @@
 Date and Time:
-07/04/2025 19:45:03
+09/04/2025 00:24:06
 Computer:
 archlinux
 
@@ -33,7 +33,7 @@ F
 generating amber test for: variant_004.comp in results/output2
 running test: variant_004.amber
 timeout -k 1 15 amber variant_004.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_005.comp in results/output2
 running test: variant_005.amber
@@ -468,7 +468,7 @@ F
 generating amber test for: variant_091.comp in results/output2
 running test: variant_091.amber
 timeout -k 1 15 amber variant_091.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_092.comp in results/output2
 running test: variant_092.amber
@@ -514,20 +514,20 @@ F
 Finished running tests!
 
 writing simple ascii table to:
-results/output2/simple_final_results-2025-04-07.txt
+results/output2/simple_final_results-2025-04-09.txt
 
 writing iteration-based ascii table to:
-results/output2/iteration_based_final_results-2025-04-07.txt
+results/output2/iteration_based_final_results-2025-04-09.txt
 
 writing simple csv table to:
-results/output2/simple_final_results-2025-04-07.csv
+results/output2/simple_final_results-2025-04-09.csv
 
 writing simple csv table to:
-results/output2/simple_final_results-2025-04-07.csv
+results/output2/simple_final_results-2025-04-09.csv
 
 writing colored html table to:
-results/output2/html-colored-table2025-04-07.html
+results/output2/html-colored-table2025-04-09.html
 
 
 Execution time (s):
-186.8230435848236
+193.31253814697266

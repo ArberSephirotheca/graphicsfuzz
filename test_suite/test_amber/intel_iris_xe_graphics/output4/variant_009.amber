@@ -22,19 +22,6 @@ SHADER compute test GLSL
 #endif
 
 
-struct _GLF_struct_0 {
- ivec2 _f0;
- uvec4 _f1;
- mat2x4 _f2;
-} ;
-
-struct _GLF_struct_1 {
- _GLF_struct_0 _f0;
- int _f1;
- mat2x3 _f2;
- uint num_workgroup;
-} ;
-
 layout(set = 0, binding = 1) uniform buf1 {
  vec2 injectionSwitch;
 };
@@ -51,12 +38,17 @@ void main()
 {
  uint subgroup_id = gl_SubgroupID;
  uint subgroup_size = gl_SubgroupSize;
- uint gid = gl_GlobalInvocationID.x;
- _GLF_struct_1 _GLF_struct_replacement_1 = _GLF_struct_1(_GLF_struct_0(ivec2(1), uvec4(1u), mat2x4(1.0)), 1, mat2x3(1.0), gl_NumWorkGroups.x);
+ uint subgroup_local_id = gl_SubgroupInvocationID;
+ uint num_workgroup = gl_NumWorkGroups.x;
  uint workgroup_size = gl_WorkGroupSize.x;
- uint total_threads = _GLF_struct_replacement_1.num_workgroup * workgroup_size;
- _GLF_IDENTITY(buf[gid] = 1, (buf[gid] = 1) * 1u);
- atomicStore(buf[(gid + _GLF_IDENTITY(1, clamp(_GLF_IDENTITY(1, max(1, 1)), 1, 1))) % total_threads], uint(2), 4, 64, 0);
+ uint workgroup_id = gl_WorkGroupID.x;
+ uint workgroup_base = workgroup_size * workgroup_id;
+ uint virtual_gid = workgroup_base + subgroup_id * subgroup_size + subgroup_local_id;
+ if(_GLF_DEAD(false))
+  return;
+ uint next_virtual_gid = workgroup_base + subgroup_id * subgroup_size + ((subgroup_local_id + 1) % subgroup_size);
+ buf[virtual_gid] = 1;
+ atomicStore(buf[next_virtual_gid], uint(2), 4, 64, 0);
 }
 
 END

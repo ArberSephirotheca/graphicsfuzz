@@ -1,5 +1,5 @@
 Date and Time:
-07/04/2025 19:41:57
+09/04/2025 00:21:12
 Computer:
 archlinux
 
@@ -243,7 +243,7 @@ F
 generating amber test for: variant_046.comp in results/output1
 running test: variant_046.amber
 timeout -k 1 15 amber variant_046.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_047.comp in results/output1
 running test: variant_047.amber
@@ -263,7 +263,7 @@ F
 generating amber test for: variant_050.comp in results/output1
 running test: variant_050.amber
 timeout -k 1 15 amber variant_050.amber -d -t spv1.5 >> temp_results.txt
-F
+P
 
 generating amber test for: variant_051.comp in results/output1
 running test: variant_051.amber
@@ -298,7 +298,7 @@ F
 generating amber test for: variant_057.comp in results/output1
 running test: variant_057.amber
 timeout -k 1 15 amber variant_057.amber -d -t spv1.5 >> temp_results.txt
-F
+P
 
 generating amber test for: variant_058.comp in results/output1
 running test: variant_058.amber
@@ -408,7 +408,7 @@ F
 generating amber test for: variant_079.comp in results/output1
 running test: variant_079.amber
 timeout -k 1 15 amber variant_079.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_080.comp in results/output1
 running test: variant_080.amber
@@ -473,7 +473,7 @@ F
 generating amber test for: variant_092.comp in results/output1
 running test: variant_092.amber
 timeout -k 1 15 amber variant_092.amber -d -t spv1.5 >> temp_results.txt
-P
+F
 
 generating amber test for: variant_093.comp in results/output1
 running test: variant_093.amber
@@ -514,20 +514,20 @@ F
 Finished running tests!
 
 writing simple ascii table to:
-results/output1/simple_final_results-2025-04-07.txt
+results/output1/simple_final_results-2025-04-09.txt
 
 writing iteration-based ascii table to:
-results/output1/iteration_based_final_results-2025-04-07.txt
+results/output1/iteration_based_final_results-2025-04-09.txt
 
 writing simple csv table to:
-results/output1/simple_final_results-2025-04-07.csv
+results/output1/simple_final_results-2025-04-09.csv
 
 writing simple csv table to:
-results/output1/simple_final_results-2025-04-07.csv
+results/output1/simple_final_results-2025-04-09.csv
 
 writing colored html table to:
-results/output1/html-colored-table2025-04-07.html
+results/output1/html-colored-table2025-04-09.html
 
 
 Execution time (s):
-186.1951563358307
+173.42644453048706

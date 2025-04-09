@@ -1,5 +1,5 @@
 Date and Time:
-07/04/2025 19:48:10
+09/04/2025 00:27:19
 Computer:
 archlinux
 
@@ -514,20 +514,20 @@ F
 Finished running tests!
 
 writing simple ascii table to:
-results/output3/simple_final_results-2025-04-07.txt
+results/output3/simple_final_results-2025-04-09.txt
 
 writing iteration-based ascii table to:
-results/output3/iteration_based_final_results-2025-04-07.txt
+results/output3/iteration_based_final_results-2025-04-09.txt
 
 writing simple csv table to:
-results/output3/simple_final_results-2025-04-07.csv
+results/output3/simple_final_results-2025-04-09.csv
 
 writing simple csv table to:
-results/output3/simple_final_results-2025-04-07.csv
+results/output3/simple_final_results-2025-04-09.csv
 
 writing colored html table to:
-results/output3/html-colored-table2025-04-07.html
+results/output3/html-colored-table2025-04-09.html
 
 
 Execution time (s):
-179.55145621299744
+188.03294897079468
