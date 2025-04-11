@@ -1,5 +1,0 @@
-{
-  "git_hash": "00128c8906b29f536791f6b63df4c1f1694e253e-dirty",
-  "args": "/opt/graphicsfuzz/temp/./references/subgroup_op.json ./donors /output/syn_subgroup_op --seed 620260574 --max-uniforms 0 --max-bytes 500000 --push-constant-probability 0.5 --vulkan --num-variants 100",
-  "seed": "RandomWrapper with seed: 620260574"
-}
