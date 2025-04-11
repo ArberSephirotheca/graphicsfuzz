@@ -1,5 +1,5 @@
 {
-  "git_hash": "1cdffbdb3305b6a4ba696a89d464d6b9074e2be8-dirty",
-  "args": "/opt/graphicsfuzz/temp/./references/lock_step_relax.json ./donors /output/syn_lock_step_relax --seed 417274708 --max-uniforms 0 --max-bytes 500000 --push-constant-probability 0.5 --vulkan --num-variants 100",
-  "seed": "RandomWrapper with seed: 417274708"
+  "git_hash": "00128c8906b29f536791f6b63df4c1f1694e253e-dirty",
+  "args": "/opt/graphicsfuzz/temp/./references/lock_step_relax.json ./donors /output/syn_lock_step_relax --seed 1156871562 --max-uniforms 0 --max-bytes 500000 --push-constant-probability 0.5 --vulkan --num-variants 100",
+  "seed": "RandomWrapper with seed: 1156871562"
 }

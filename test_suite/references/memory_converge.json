@@ -7,6 +7,13 @@
           [
             { "type": "uint", "buf": [ 0 ] }
           ]
+        },
+        "buffer1": {
+          "binding": 2,
+          "fields":
+          [
+            { "type": "uint", "write_val": [ 0 ] }
+          ]
         }
       }
     }

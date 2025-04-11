@@ -1,5 +1,5 @@
 {
-  "git_hash": "1cdffbdb3305b6a4ba696a89d464d6b9074e2be8-dirty",
-  "args": "/opt/graphicsfuzz/temp/./references/subgroup_op_release.json ./donors /output/syn_subgroup_op_release --seed 1169054626 --max-uniforms 0 --max-bytes 500000 --push-constant-probability 0.5 --vulkan --num-variants 100",
-  "seed": "RandomWrapper with seed: 1169054626"
+  "git_hash": "00128c8906b29f536791f6b63df4c1f1694e253e-dirty",
+  "args": "/opt/graphicsfuzz/temp/./references/subgroup_op_release.json ./donors /output/syn_subgroup_op_release --seed 669606519 --max-uniforms 0 --max-bytes 500000 --push-constant-probability 0.5 --vulkan --num-variants 100",
+  "seed": "RandomWrapper with seed: 669606519"
 }

@@ -29,3 +29,5 @@ venv/
 /graphicsfuzz/src/main/scripts/OPEN_SOURCE_LICENSES.TXT
 /out/
 /output/
+/test_suite
+Dockerfile

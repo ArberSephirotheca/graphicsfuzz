@@ -39,7 +39,7 @@ void main()
  uint virtual_gid = workgroup_base + subgroup_id * subgroup_size + subgroup_local_id;
  uint next_virtual_gid = workgroup_base + subgroup_id * subgroup_size + ((subgroup_local_id + 1) % subgroup_size);
  buf[virtual_gid] = 1;
- buf[next_virtual_gid] = 2;
  if(_GLF_DEAD(_GLF_FALSE(false, (injectionSwitch.x > injectionSwitch.y))))
-  barrier();
+  return;
+ buf[next_virtual_gid] = 2;
 }

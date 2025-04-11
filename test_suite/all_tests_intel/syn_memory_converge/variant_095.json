@@ -15,6 +15,17 @@
           ]
         }
       ]
+    },
+    "buffer1": {
+      "binding": 0,
+      "fields": [
+        {
+          "type": "uint",
+          "write_val": [
+            0
+          ]
+        }
+      ]
     }
   },
   "injectionSwitch": {
