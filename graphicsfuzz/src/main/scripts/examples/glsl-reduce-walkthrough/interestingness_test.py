@@ -20,10 +20,10 @@ import sys
 
 HERE = os.path.abspath(__file__)
 
-frag = os.path.splitext(sys.argv[1])[0] + ".frag"
-print(frag)
+comp = os.path.splitext(sys.argv[1])[0] + ".comp"
+print(comp)
 
-cmd = os.path.join(os.path.dirname(HERE), "fake_compiler") + " " + frag
+cmd = os.path.join(os.path.dirname(HERE), "fake_compiler") + " " + comp
 
 p = subprocess.run(
     cmd,
