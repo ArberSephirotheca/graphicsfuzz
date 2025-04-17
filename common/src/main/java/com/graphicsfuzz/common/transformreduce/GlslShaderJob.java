@@ -128,7 +128,7 @@ public class GlslShaderJob implements ShaderJob {
             assert pipelineInfo.hasUniform(uniformName);
             if (pushConstant.isPresent() && pushConstant.get().equals(uniformName)) {
               // In case of push constants, the binding number (0 here) is ignored.
-              pipelineInfo.addUniformBinding(uniformName, true, 0);
+              pipelineInfo.addUniformBinding(uniformName, true, nextBinding);
             } else if (!pipelineInfo.hasBinding(uniformName)) {
               pipelineInfo.addUniformBinding(uniformName, false, nextBinding);
               do {
