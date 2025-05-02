@@ -22,6 +22,7 @@ import com.graphicsfuzz.common.ast.type.QualifiedType;
 import com.graphicsfuzz.common.ast.type.SamplerType;
 import com.graphicsfuzz.common.ast.type.StructDefinitionType;
 import com.graphicsfuzz.common.ast.type.Type;
+import com.graphicsfuzz.common.ast.type.ArrayType;
 import com.graphicsfuzz.common.ast.type.TypeQualifier;
 import com.graphicsfuzz.common.ast.type.VoidType;
 import com.graphicsfuzz.common.glslversion.ShadingLanguageVersion;
@@ -907,7 +908,11 @@ public final class TyperHelper {
         }
         addBuiltin(builtinsForVersion, "atomicCompSwap", t, new QualifiedType(t,
             Collections.singletonList(TypeQualifier.INOUT_PARAM)), t, t);
+        addBuiltin(builtinsForVersion, "atomicLoad", t, new QualifiedType(
+            new ArrayType(t, null),
+            Collections.singletonList(TypeQualifier.READONLY)), t, t, t);
       }
+      
     }
   }
 
