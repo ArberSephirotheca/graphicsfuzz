@@ -908,8 +908,8 @@ public final class TyperHelper {
         }
         addBuiltin(builtinsForVersion, "atomicCompSwap", t, new QualifiedType(t,
             Collections.singletonList(TypeQualifier.INOUT_PARAM)), t, t);
-        addBuiltin(builtinsForVersion, "atomicLoad", t, new QualifiedType(
-            new ArrayType(t, null),
+        addBuiltin(builtinsForVersion, "atomicLoad", t, 
+            new QualifiedType(new ArrayType(t, null),
             Collections.singletonList(TypeQualifier.READONLY)), t, t, t);
       }
       
