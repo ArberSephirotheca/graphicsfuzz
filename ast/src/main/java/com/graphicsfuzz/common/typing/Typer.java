@@ -350,9 +350,6 @@ public class Typer extends ScopeTrackingVisitor {
 
   @Override
   public void visitBinaryExpr(BinaryExpr binaryExpr) {
-    // super.visitBinaryExpr(binaryExpr);
-    // Type lhsType = types.get(binaryExpr.getLhs()).getWithoutQualifiers();
-    // Type rhsType = types.get(binaryExpr.getRhs()).getWithoutQualifiers();
   super.visitBinaryExpr(binaryExpr);
   
   Type lhsType = types.get(binaryExpr.getLhs());
