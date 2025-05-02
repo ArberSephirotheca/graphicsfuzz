@@ -20,7 +20,7 @@ package com.graphicsfuzz.common.typing;
 // import com.graphicsfuzz.common.ast.decl.ArrayInfo;
 import com.graphicsfuzz.common.ast.decl.FunctionPrototype;
 // import com.graphicsfuzz.common.ast.expr.IntConstantExpr;
-// import com.graphicsfuzz.common.ast.type.ArrayType;
+import com.graphicsfuzz.common.ast.type.ArrayType;
 import com.graphicsfuzz.common.ast.type.BasicType;
 import com.graphicsfuzz.common.ast.type.QualifiedType;
 import com.graphicsfuzz.common.ast.type.SamplerType;
@@ -913,7 +913,8 @@ public final class TyperHelper {
         addBuiltin(builtinsForVersion, "atomicCompSwap", t, new QualifiedType(t,
             Collections.singletonList(TypeQualifier.INOUT_PARAM)), t, t);
 
-        addBuiltin(builtinsForVersion, "atomicLoad", t, new QualifiedType(t,
+        addBuiltin(builtinsForVersion, "atomicLoad", t,
+            new QualifiedType(new ArrayType(t, null),
             Collections.singletonList(TypeQualifier.READONLY)), t, t, t);
         // addBuiltin(builtinsForVersion, "atomicStore", VoidType.VOID,
         //     new QualifiedType(t, Collections.singletonList(TypeQualifier.INOUT_PARAM)),
