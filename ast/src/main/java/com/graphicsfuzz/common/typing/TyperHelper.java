@@ -914,7 +914,7 @@ public final class TyperHelper {
             new QualifiedType(t, 
               // new ArrayType(t,
               // new ArrayInfo(Collections.singletonList(Optional.empty()))),
-              Collections.singletonList(TypeQualifier.READONLY)), t, t, t);
+              Collections.singletonList(TypeQualifier.INOUT_PARAM)), t, t, t);
         // addBuiltin(builtinsForVersion, "atomicStore", VoidType.VOID,
         //     new QualifiedType(t, Collections.singletonList(TypeQualifier.INOUT_PARAM)),
         //     t);
