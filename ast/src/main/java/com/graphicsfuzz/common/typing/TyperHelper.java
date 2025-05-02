@@ -16,8 +16,11 @@
 
 package com.graphicsfuzz.common.typing;
 
+import com.graphicsfuzz.common.ast.decl.ArrayInfo;
 // import com.graphicsfuzz.common.ast.decl.ArrayInfo;
 import com.graphicsfuzz.common.ast.decl.FunctionPrototype;
+import com.graphicsfuzz.common.ast.expr.IntConstantExpr;
+import com.graphicsfuzz.common.ast.type.ArrayType;
 // import com.graphicsfuzz.common.ast.type.ArrayType;
 import com.graphicsfuzz.common.ast.type.BasicType;
 import com.graphicsfuzz.common.ast.type.QualifiedType;
@@ -34,6 +37,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 // import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -910,11 +914,14 @@ public final class TyperHelper {
         }
         addBuiltin(builtinsForVersion, "atomicCompSwap", t, new QualifiedType(t,
             Collections.singletonList(TypeQualifier.INOUT_PARAM)), t, t);
+
+          
         addBuiltin(builtinsForVersion, "atomicLoad", t, 
-            new QualifiedType(t, 
-              // new ArrayType(t,
-              // new ArrayInfo(Collections.singletonList(Optional.empty()))),
-              Collections.singletonList(TypeQualifier.INOUT_PARAM)), t, t, t);
+            new QualifiedType(
+              new ArrayType(t, new ArrayInfo(
+                  Collections.singletonList(Optional.of(new IntConstantExpr("1"))))
+              ),
+              Collections.singletonList(TypeQualifier.READONLY)), t, t, t);
         // addBuiltin(builtinsForVersion, "atomicStore", VoidType.VOID,
         //     new QualifiedType(t, Collections.singletonList(TypeQualifier.INOUT_PARAM)),
         //     t);
