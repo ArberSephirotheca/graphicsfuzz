@@ -908,7 +908,7 @@ public final class TyperHelper {
         addBuiltin(builtinsForVersion, "atomicCompSwap", t, new QualifiedType(t,
             Collections.singletonList(TypeQualifier.INOUT_PARAM)), t, t);
 
-        addBuiltin(builtinsForVersion, "atomicLoad", t, BasicType.INT,
+        addBuiltin(builtinsForVersion, "atomicLoad", t, t, BasicType.INT,
             BasicType.INT, BasicType.INT);
         addBuiltin(builtinsForVersion, "atomicStore", VoidType.VOID, t,
             BasicType.INT, BasicType.INT, BasicType.INT);
