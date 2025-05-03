@@ -907,7 +907,6 @@ public final class TyperHelper {
         }
         addBuiltin(builtinsForVersion, "atomicCompSwap", t, new QualifiedType(t,
             Collections.singletonList(TypeQualifier.INOUT_PARAM)), t, t);
-
         addBuiltin(builtinsForVersion, "atomicLoad", t, t, BasicType.INT,
             BasicType.INT, BasicType.INT);
         addBuiltin(builtinsForVersion, "atomicStore", VoidType.VOID, t,
@@ -919,7 +918,7 @@ public final class TyperHelper {
 
   /**
    * Helper function to register built-in function prototypes for Fragment Processing Functions,
-   * as specified in section 8.14 of the GLSL 4.6 and ESSL 3.2 specifications.
+   * as specified in section 8.14 of the GLSL 4.6 and ESSL 3.2 specifications.S
    *
    * @param builtinsForVersion the list of builtins to add prototypes to
    * @param shadingLanguageVersion the version of GLSL in use

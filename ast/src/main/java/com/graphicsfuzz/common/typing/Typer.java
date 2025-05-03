@@ -110,13 +110,11 @@ public class Typer extends ScopeTrackingVisitor {
 
   @Override
   public void visitFunctionCallExpr(FunctionCallExpr functionCallExpr) {
-    System.out.println("FunctionCallExpr: " + functionCallExpr.getText());
     super.visitFunctionCallExpr(functionCallExpr);
 
     // Check that types have been found for all arguments to the function.
     for (Expr arg : functionCallExpr.getArgs()) {
       assert types.get(arg) != null;
-      System.out.println("Argument: " + arg.getText() + " | Type: " + types.get(arg).toString());
     }
 
     // First, see whether this is an invocation of a GraphicsFuzz macro.  If it is, we handle it
